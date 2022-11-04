@@ -1,8 +1,8 @@
 # React in 3 Weeks
-TODO: RAP testing is JS Testing -> Angular Testing. And JS Testing -> React Testing -> RN Testing
+<!-- TODO: RAP testing is JS Testing -> Angular Testing. And JS Testing -> React Testing -> RN Testing
 TODO: RAP Renumber the links in Agenda.md and make sure they work
 TODO: Define the Orders filter criteria below
-TODO: Add the completed app to github and allow users to test out the app.
+TODO: Add the completed app to github and allow users to test out the app. -->
 
 Resources to support @RapPayne's O'Reilly course.
 
@@ -44,7 +44,7 @@ Also to modify user data.
 ### Login
 Authenticate to the system. Writes to local storage for persisting a login token.
 
-You can give it a test drive here. 
+<!-- You can give it a test drive here.  -->
 
-## Copyright &copy; 2022 Agile Gadgets LLC. 
+Copyright &copy; 2022 Agile Gadgets LLC. 
 All rights reserved. You may not republish or copy any part of this repository except for your own personal learning. If you want to use this as courseware for a React course, contact [@RapPayne](http://github.com/RapPayne) to obtain a license. 
