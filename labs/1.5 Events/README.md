@@ -27,7 +27,7 @@ Let's do another one just like the *Add* button above. But this one is in Cart.j
 ## Wiring the *Log in* button
 Nice. Let's do a third, but this time with even fewer instructions.
 
-8.  Edit Login.js. Make the button console.log() a message.
-9.  Test your code to make sure it works.
+9.  Edit Login.js. Make the button console.log() a message.
+10.  Test your code to make sure it works.
 
 Congratulations, you're finished!

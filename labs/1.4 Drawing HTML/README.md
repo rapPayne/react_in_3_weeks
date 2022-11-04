@@ -17,16 +17,16 @@ Note: This link will not actually work yet so don't expect it to.
 ## Implementing the JSX for Menu.js
 Writing one of these from scratch was good practice but this isn’t a course about HTML so rather than have you write a bunch of HTML, we’ve written it for you. You’re going to simply put the prewritten JSX in your components.
 
-7.	Edit App.js and make `<Menu>` the component being shown.
-8.	Now edit Menu.js. Remove the few lines of JSX that you wrote in the earlier labs and replace it with the contents of Menu.starter.jsx which you’ll find in the starters folder we’ve provided for you.
-9.	Run and test. Correct any problems you might have in the transpiling and the running. You should be seeing a menu item with a picture, name, description, price, and an 'Add' button.
+8.	Edit App.js and make `<Menu>` the component being shown.
+9.	Now edit Menu.js. Remove the few lines of JSX that you wrote in the earlier labs and replace it with the contents of Menu.starter.jsx which you’ll find in the starters folder we’ve provided for you.
+10.	Run and test. Correct any problems you might have in the transpiling and the running. You should be seeing a menu item with a picture, name, description, price, and an 'Add' button.
 
 ## Finishing off the rest
 Now that you’ve implemented the JSX for Menu, do the same for the rest.
 
-10. Start with Orders.js. Find Orders.starter.jsx and copy its contents in place of the existing `return (` statement.
-11. Next do Order.js.
-12. And finally, do Cart.js.
+11. Start with Orders.js. Find Orders.starter.jsx and copy its contents in place of the existing `return (` statement.
+12. Next do Order.js.
+13. And finally, do Cart.js.
 
 If there are minor JavaScript errors like variables that are not declared, go ahead and fix them.
 

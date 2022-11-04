@@ -12,8 +12,8 @@ Let's get it reading some data.
 
 ## Reading from our API data server
 
-1. Open your restaurant project in an IDE like VSCode.
-2. Edit `package.json`. Add a "proxy" line anywhere at the top level.
+4. Open your restaurant project in an IDE like VSCode.
+5. Edit `package.json`. Add a "proxy" line anywhere at the top level.
 ```json
 {
   "name": "restaurant",
@@ -21,9 +21,9 @@ Let's get it reading some data.
   "version": "0.1.0",
   "private": true,
 ```
-3. Look in the starters folder for "utilities.js". Copy this into the src folder.
-4. Restart your project with `npm start`
-5. Edit src/index.js and make its entire contents look like this.
+6. Look in the starters folder for "utilities.js". Copy this into the src folder.
+7. Restart your project with `npm start`
+8. Edit src/index.js and make its entire contents look like this.
 ```JavaScript
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -34,7 +34,7 @@ ReactDOM
 ```
 Ignore the error message about an export. We'll fix that soon.
 
-6. Create a new file called Menu.js and put this in it
+9. Create a new file called Menu.js and put this in it
 ```JavaScript
 import { useEffect, useState } from 'react';
 import { getMenuItems, toCurrency } from './utilities';
@@ -56,7 +56,7 @@ export const Menu = () => {
 ```
 There's a lot of magic in that code with the useState and useEffect. Don't worry about those things right now because we'll cover them in detail later.
 
-6. Edit src/App.js and replace its entire contents with this
+10. Edit src/App.js and replace its entire contents with this
 ```JavaScript
 import { Menu } from './Menu';
 export function App() {
@@ -75,6 +75,6 @@ export function App() {
 }
 ```
 
-5. Run and test. You should see one menu item on the page and many menu items in the console.
+11. Run and test. You should see one menu item on the page and many menu items in the console.
 
 If so, congratulations! You've got your new React app reading from the API data server.
