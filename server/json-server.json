@@ -1,0 +1,10 @@
+{
+  "port": 3008,
+  "routes": "./routes.json",
+  "middlewares": [
+    "./middlewares/cookie-middleware.js",
+    "./middlewares/logging-middleware.js",
+    "./middlewares/authentication-middleware.js"
+  ],
+  "watch": true
+}

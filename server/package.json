@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "API server with a simple JSON database and fake data",
+  "main": "index.js",
+  "scripts": {
+    "load-db": "node reloadDatabase.mjs",
+    "startDirect": "json-server --watch --config json-server.json ./database.json",
+    "start": "node --watch apiServer.mjs"
+  },
+  "author": "@RapPayne",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "chance": "^1.1.8"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "json-server": "^0.17.0"
+  }
+}
