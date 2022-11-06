@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "pass",
+    "first": "Administrative",
+    "last": "User",
+    "phone": "(555) 123-4567",
+    "email": "admin@daam.com",
+    "imageUrl": "https://minimaltoolkit.com/images/randomdata/female/70.jpg",
+    "creditCard": {
+      "PAN": "",
+      "expiryMonth": 6,
+      "expiryYear": 2025
+    },
+    "adminUser": true
+  },
+  {
+    "id": 2,
+    "username": "cmac",
+    "password": "pass",
+    "first": "Caitlin",
+    "last": "McIntyre",
+    "phone": "(555) 123-4567",
+    "email": "cmac@daam.com",
+    "imageUrl": "https://minimaltoolkit.com/images/randomdata/female/71.jpg",
+    "creditCard": {
+      "PAN": "",
+      "expiryMonth": 6,
+      "expiryYear": 2025
+    },
+    "adminUser": true
+  }
+]

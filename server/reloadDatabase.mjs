@@ -17,10 +17,12 @@ const loadFromJSON = (filename) => JSON.parse(fs.readFileSync(filename));
 const chance = Chance.Chance();
 const foodImageFiles = fs.readdirSync('./public/images');
 const initialMenuItems = loadFromJSON('./initial_data/menuItems.json');
+const initialUsers = loadFromJSON('./initial_data/users.json');
 const db = {};
 
 // Create some users
 db.users = [];
+db.users.push(...initialUsers);
 for (let i = startingUserId; i <= startingUserId + howManyUsers; i++) {
   db.users.push(makeRandomUser(i))
 }
@@ -103,12 +105,12 @@ function makeRandomUser(id = 0) {
   const person = {
     id,
     username: `${first.charAt(0).toLowerCase()
-      }.${last.toLowerCase()} `,
+      }.${last.toLowerCase()}`,
     password: chance.word(),
     first,
     last,
     phone: chance.phone(),
-    email: `${first.toLowerCase()}.${last.toLowerCase()} @example.com`,
+    email: `${first.toLowerCase()}.${last.toLowerCase()}@example.com`,
     imageUrl: `https://minimaltoolkit.com/images/randomdata/${gender}/${randomImageNumber}.jpg`,
     creditCard: card,
     adminUser: false,
