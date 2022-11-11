@@ -2,6 +2,15 @@
 
 ## JavaScript things
 
+## HTML things
+
+## CSS things
+
+### Grid layout
+
+### Flex layout
+
+
 
 ## Browser things
 
