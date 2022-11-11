@@ -2,10 +2,11 @@ return (
   <>
     <h1>Cart</h1>
     <section className="cartItem">
-      <p>CART_ITEM_NAME_HERE</p>
+      <h2>CART_ITEM_NAME_HERE</h2>
       <p>CART_ITEM_CATEGORY_HERE</p>
       <p>CART_ITEM_PRICE_HERE</p>
-      <p>for: <input /></p>
+      <label>For</label>
+      <input />
       <label>Special requests</label>
       <textarea></textarea>
       <button>Remove</button>
