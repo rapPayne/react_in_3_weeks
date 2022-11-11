@@ -1,5 +1,8 @@
 # React Router
 <!-- Time: 30min -->
+
+Let's add client-side routing to our web app. After this lab, the user will be able to navigate from component to component.
+
 1. First, install react-router-dom. from the command line run 
 ```bash
 npm install react-router-dom
@@ -46,7 +49,7 @@ export function Order() {
   const { orderId } = useParams(); // <-Add this line
   console.log("Order", orderId);
 ```
-9. Run and test. If you console.log() the orderId, you should be able to browse to http://localhost:3000/orders/123 and see '123' logged to the console.
+9. Run and test. If you console.log() the orderId, you should be able to browse to http://localhost:3000/orders/123 and see '123' logged to the console. Try it with several different order numbers.
 
 ## Creating the nav bar Links
 Reloading the app on every hyperlink click is clunky and slow. We should avoid using `<a href="foo>Go to Foo</a>`. Instead we should use `<Link>`.
@@ -65,13 +68,15 @@ Reloading the app on every hyperlink click is clunky and slow. We should avoid u
 ```
 Don't forget to import Link.
 
+This navigation bar will appear at the top of every view.
+
 11. If you run and test, you should be able to click on any of these links and navigate successfully. Fix any problems you encounter.
 12. Bonus! In the Login.js component, there's a hyperlink that sends the user to the '/register' route. Change that to a `<Link>`
 
 Alright! One more task.
 
 ## Navigating in JavaScript
-When we navigage to the Orders route, the user will eventually see a list of orders. (Right now it's just a single line). We want them to be able to click/tap on any order in that list to navigate to `/orders/<orderId>` and view the details for that order. We *could* make that a `<Link>` but it will look better as table rows. So we're going to use the `useNavigate` hook.
+When the user navigates to the Orders route, they will eventually see a list of orders. (Right now it's just a single line). We want them to be able to click/tap on any order in that list to navigate to `/orders/<orderId>` and view the details for that order. We *could* make that a `<Link>` but it won't style as nicely as table rows. So we're going to use the `useNavigate` hook.
 
 13. Make the top of Orders.js look like this.
 ```JavaScript
@@ -91,11 +96,11 @@ You're adding the "import" and the "const" lines.
 If the user navigates to a route we don't have defined, it will show nothing at all, which will be confusing to them. Let's fix that with a catch-all route.
 
 16. Test it out first by navigating to http://localhost:3000/nonsense
-17. You see nothing where a component should be, right?
-18. Add this as the last line of your `<Route>`s
+You see nothing where a component should be, right?
+17. Add this as the last line of your `<Route>`s
 ```JavaScript
     <Route path="*" element={<NotFound />} />
 ```
-19. Of course it doesn't compile because `<NotFound>` doesn't exist yet.
-20. Create `<NotFound>`. Make it look any way you want. Maybe tell the user "404 Not found" or something? Don't forget to import it in App.js.
-21. Run and test. It's working when you can navigate to any non-existent route and see your new component.
+Of course it doesn't compile because `<NotFound>` doesn't exist yet.
+18.  Create `<NotFound>`. Make it look any way you want. Maybe tell the user "404 Not found" or something? Don't forget to import it in App.js.
+19.  Run and test. It's working when you can navigate to any non-existent route and see your new component.
