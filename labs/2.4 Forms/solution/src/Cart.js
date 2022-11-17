@@ -6,7 +6,7 @@ export function Cart() {
   const [expiryMonth, setExpiryMonth] = useState(0);
   const [expiryYear, setExpiryYear] = useState(0);
   const [cvv, setCvv] = useState(0);
-  const [location, setLocation] = useState(0);
+  const [location, setLocation] = useState("");
   const cart = [{
     id: 1,
     name: "Garden salad",

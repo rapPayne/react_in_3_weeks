@@ -18,7 +18,7 @@ const [tip, setTip] = useState(0);
 ```
 Hint: The `+` sign is there to convert a string to a number.
 
-Now let's use it!
+That was setting the tip, now let's use it!
 
 ## Showing the cart totals
 5. Still in Cart.js, find the `<section>` that has notes about displaying the TAX_HERE, CART_TOTAL_HERE, and GRAND_TOTAL_HERE. Make it look like this:
@@ -34,13 +34,13 @@ Now let's use it!
 ```JavaScript
 import { calculateTax, getCartTotal, toCurrency, placeOrder as placeOrderToServer } from './utilities';
 ```
-7.  Run and test. If you have it working right, you can change the tip and watch the totals change with it.
+7.  Run and test. You'll know you have it working right when you can change the tip and watch the totals change with it.
 
 ## Payment info
 Here's a challenge. Try to do the same thing but for the credit card information. We'll give you less instruction this time.
 
 8. Add state variables for `pan`, `expiryMonth`, `expiryYear`, and `cvv`. 
-By the way, the 'pan' is the credit card's primary account number, the 16-digit number. The 'cvv' is the 3-digit code on the back of cards.
+(By the way, the 'pan' is the credit card's primary account number, the 16-digit number and the 'cvv' is the 3-digit code on the back of cards.)
 
 9. Change the `<input>` fields to handle these state variables. (Hint: you'll want to set the `value` property and the `onChange` event.)
 
