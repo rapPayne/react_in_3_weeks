@@ -51,13 +51,13 @@ export const placeOrder = (orderDetails) => {
 export const getOrderTotal = (order) =>
   toCurrency(order.tax
     + order.tip
-    + order.items.reduce((prev, curr) => prev + curr.price, 0)
+    + order.items?.reduce((prev, curr) => prev + curr.price, 0)
   );
 
 export const getNumberOfDiners = (order) => {
   const diners = [];
   let totalDiners = 0;
-  order.items.forEach((i) => diners.includes(i.firstName ?? "no name") || totalDiners++);
+  order.items?.forEach((i) => diners.includes(i.firstName ?? "no name") || totalDiners++);
   return totalDiners;
 }
 
