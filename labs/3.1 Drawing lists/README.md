@@ -1,5 +1,5 @@
 # Drawing lists
-<!-- Time: 15 minutes -->
+<!-- Time: 20 minutes -->
 
 ## Showing all the menu items
 You've seen how we are showing one menu item on the page. But there are many items! Let's show them all by iterating them with `map()`.
