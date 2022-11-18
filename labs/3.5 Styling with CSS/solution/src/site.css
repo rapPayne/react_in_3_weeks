@@ -1,0 +1,41 @@
+:root {
+  --dark1: #641634;
+  --dark2: #341D3A;
+  --dark3: #29776F;
+  --light1: #EBE896;
+  --light2: #CCB280;
+
+  color: var(--dark1);
+  background-color: var(--light1);
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  padding: 13px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  color: var(--light1);
+  background-color: var(--dark3);
+  border: none;
+}
+
+#pageHeader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#pageHeader nav {
+  display: flex;
+  background-color: var(--dark2);
+}
+
+#pageHeader nav a {
+  color: var(--light1);
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+}
