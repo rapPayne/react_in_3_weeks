@@ -1,5 +1,4 @@
 # Styling with stylesheets
-TODO: NOT YET COMPLETE
 <!-- Time: 10 minutes -->
 
 <!-- TODO: RAP, make the finalized version look great and then move it here.
