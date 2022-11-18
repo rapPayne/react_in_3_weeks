@@ -1,5 +1,5 @@
 # Styling inside a component
-TODO: NOT YET FINISHED
+<!-- Time: 15 minutes -->
 
 This lab is all about aesthetics! Your opinions about looks may differ. Don't be constrained to follow our instructions exactly. Feel free to change the structure of the Menu component to make it layout however you decide.
 
