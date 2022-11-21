@@ -92,6 +92,18 @@ You're adding the "import" and the "const" lines.
 ``` 
 15. Run and test. When you click/tap the row, you should navigate to the order detail for that order.
 
+## Navigating on a button click
+Let's say when the user logs in, we should route them to the "/home" route.
+
+1.  First, remember to import useNavigate from react-router and call `useNavigate()` to get an instance of the navigate function. 
+
+2.  Edit Login.js. Find the button's click event. Change it to this:
+```JavaScript
+function login() {
+  navigate('/home');
+}
+```
+
 ## Bonus! Add a catch-all route
 If the user navigates to a route we don't have defined, it will show nothing at all, which will be confusing to them. Let's fix that with a catch-all route.
 

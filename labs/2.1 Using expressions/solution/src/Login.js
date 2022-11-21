@@ -1,5 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 export function Login() {
-  console.log("Login");
+  const navigate = useNavigate();
   return (
     <>
       <h1>Log in</h1>
@@ -11,8 +12,7 @@ export function Login() {
       <a href="/register">Register</a>
     </>
   );
-  function login(evt) {
-    evt.preventDefault()
-    console.log("Logging in", evt)
+  function login() {
+    navigate('/home');
   }
 }

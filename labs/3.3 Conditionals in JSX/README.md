@@ -17,22 +17,9 @@ export function Login() {
 ```
 to this:
 ```JavaScript
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { login as loginToServer } from './utilities';
 export function Login(props) {
   const setUser = props.setUser;
-  const navigate = useNavigate();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-```
-3. Wire up the input boxes to save username and password to state:
-```HTML
-<input value={username} onChange={e => setUsername(e.target.value)} />
-```
-and
-```HTML
-<input value={password} onChange={e => setPassword(e.target.value)} />
 ```
 
 1. When the user clicks the Login button, you're already calling `login`, so alter that function to submit a *real* request to the server. Make the `login` function look like this:

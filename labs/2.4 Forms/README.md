@@ -36,10 +36,10 @@ import { calculateTax, getCartTotal, toCurrency, placeOrder as placeOrderToServe
 ```
 7.  Run and test. You'll know you have it working right when you can change the tip and watch the totals change with it.
 
-## Payment info
+## Payment info and Location
 Here's a challenge. Try to do the same thing but for the credit card information. We'll give you less instruction this time.
 
-8. Add state variables for `pan`, `expiryMonth`, `expiryYear`, and `cvv`. 
+8. Add state variables for `pan`, `expiryMonth`, `expiryYear`, `cvv`, and `location`. 
 (By the way, the 'pan' is the credit card's primary account number, the 16-digit number and the 'cvv' is the 3-digit code on the back of cards.)
 
 9. Change the `<input>` fields to handle these state variables. (Hint: you'll want to set the `value` property and the `onChange` event.)
@@ -48,7 +48,19 @@ Here's a challenge. Try to do the same thing but for the credit card information
 
 11. Run and test, making sure you can enter values and, when you click the "Place order" button, you see them in the console.
 
-## Location
-12. Last one for now. Do the same thing for `location`. Look for the 'Deliver to' textbox.
+## Login
 
-You should be a pro at it by now. So that's all the instruction you need. :-)
+12. Last one for now. Edit Login.js. Add two state variables for
+```JavaScript
+const [username, setUsername] = useState("");
+const [password, setPassword] = useState("");
+```
+
+13. Find the two textboxes. Make the first change username and the second change password.
+```HTML
+<input value={username} onChange={e => setUsername(e.target.value)} />
+```
+and
+```HTML
+<input value={password} onChange={e => setPassword(e.target.value)} />
+```
