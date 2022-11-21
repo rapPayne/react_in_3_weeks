@@ -10,7 +10,6 @@ export function Orders() {
       .then(os => setOrders(os))
   }, []);
   const navigate = useNavigate();
-  console.log("Orders");
   return (
     <>
       <h1>Orders</h1>

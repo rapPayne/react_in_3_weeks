@@ -46,5 +46,11 @@ Authenticate to the system. Writes to local storage for persisting a login token
 
 <!-- You can give it a test drive here.  -->
 
+# Connect with Rap
+- Twitter: [@RapPayne](https://twitter.com/RapPayne)
+- LinkedIn: [RapPayne](https://www.linkedin.com/in/rappayne/)
+- Github: [RapPayne](https://github.com/rapPayne)
+- Reddit: [RapPayne](https://www.reddit.com/u/rapPayne)
+
 Copyright &copy; 2022 Agile Gadgets LLC. 
 All rights reserved. You may not republish or copy any part of this repository except for your own personal learning. If you want to use this as courseware for a React course, contact [@RapPayne](http://github.com/RapPayne) to obtain a license. 

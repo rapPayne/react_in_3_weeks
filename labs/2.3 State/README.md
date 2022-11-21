@@ -83,4 +83,25 @@ useEffect(() => {
 ```
 3. Feel free to `console.log({order, menuItems})` to make sure they're reading data.
 
+## Saving orders to state
+Let's do one last one. 
+
+1.  Edit Orders.js. Change the reader from this
+```JavaScript
+export function Orders() {
+  useEffect(() => {
+    getOrders()
+  }, []);
+```
+to this
+```JavaScript
+export function Orders() {
+  const [orders, setOrders] = useState([]); // <-- Add this
+  useEffect(() => {
+    getOrders()
+      .then(os => setOrders(os))  // <-- And this
+  }, []);
+```
+
+
 You're done!

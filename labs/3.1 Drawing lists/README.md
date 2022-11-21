@@ -23,24 +23,7 @@ and change it to say this
 3.  Run and test by looking at http://localhost:3000/. If you've got it right, you should see a whole bunch of menu items instead of just the one.
 
 ## Showing all the orders
-We have the same situation in Orders.js. There's only one showing. Let's see if you can fix that with fewer instructions.
-
-1.  Edit Orders.js. Change the reader from this
-```JavaScript
-export function Orders() {
-  useEffect(() => {
-    getOrders()
-  }, []);
-```
-to this
-```JavaScript
-export function Orders() {
-  const [orders, setOrders] = useState([]); // <-- Add this
-  useEffect(() => {
-    getOrders()
-      .then(os => setOrders(os))  // <-- And this
-  }, []);
-```
+We have the same situation in Orders.js. There's only one order showing. Let's see if you can show all the orders with fewer instructions.
 
 1.  Edit Orders.js. Find the `<tr>` that need to be repeated. Wrap it in a `map()` function and use expressions (hint: use curly braces) to display the orderId and orderTime.
 2.  Run and test. Got those two? Cool. 
