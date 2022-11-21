@@ -34,7 +34,7 @@ export function Cart() {
       <section>
         <p>Tax: {toCurrency(calculateTax(getCartTotal(cart)))}</p>
         <p>Total: {toCurrency(getCartTotal(cart) + calculateTax(getCartTotal(cart)))}</p>
-        <p>Tip: <input value={tip} onChange={e => setTip(+e.target.value)} type="number" step="0.01" /></p>
+        <div>Tip: <input value={tip} onChange={e => setTip(+e.target.value)} type="number" step="0.01" /></div>
         <p>Amount to charge: {toCurrency(getCartTotal(cart) + calculateTax(getCartTotal(cart)) + (tip || 0))}</p>
       </section>
       <section>

@@ -15,7 +15,7 @@ export function Cart() {
       <section>
         <p>Tax: TAX_HERE</p>
         <p>Total: CART_TOTAL_HERE</p>
-        <p>Tip: <input type="number" step="0.01" /></p>
+        <div>Tip: <input type="number" step="0.01" /></div>
         <p>Amount to charge: GRAND_TOTAL_HERE</p>
       </section>
       <section>

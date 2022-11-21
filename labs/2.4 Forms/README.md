@@ -14,7 +14,7 @@ const [tip, setTip] = useState(0);
 ```
 4. Find the `<input>` for the tip. Make it look like this.
 ```JavaScript
-<p>Tip: <input value={tip} onChange={e => setTip(+e.target.value)} type="number" step="0.01" /></p>
+<div>Tip: <input value={tip} onChange={e => setTip(+e.target.value)} type="number" step="0.01" /></div>
 ```
 Hint: The `+` sign is there to convert a string to a number.
 
