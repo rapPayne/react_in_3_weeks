@@ -25,10 +25,26 @@
     "email": "cmac@daam.com",
     "imageUrl": "https://minimaltoolkit.com/images/randomdata/female/71.jpg",
     "creditCard": {
-      "PAN": "",
+      "PAN": "4332-1234-1234-1234",
       "expiryMonth": 6,
       "expiryYear": 2025
     },
     "adminUser": true
+  },
+  {
+    "id": 3,
+    "username": "me",
+    "password": "pass",
+    "first": "Test",
+    "last": "User",
+    "phone": "(555) 123-4567",
+    "email": "testUser@daam.com",
+    "imageUrl": "https://minimaltoolkit.com/images/randomdata/female/7.jpg",
+    "creditCard": {
+      "PAN": "4332-1234-1234-1234",
+      "expiryMonth": 6,
+      "expiryYear": 2025
+    },
+    "adminUser": false
   }
 ]

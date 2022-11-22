@@ -6,7 +6,7 @@
   "scripts": {
     "load-db": "node reloadDatabase.mjs",
     "startDirect": "json-server --watch --config json-server.json ./database.json",
-    "start": "node apiServer.mjs"
+    "start": "node --watch apiServer.mjs"
   },
   "author": "@RapPayne",
   "license": "UNLICENSED",
