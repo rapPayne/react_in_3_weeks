@@ -27,6 +27,7 @@ label {
 
 input,
 textarea {
+  display: block;
   width: 95%;
   font-size: 1.1em;
 }

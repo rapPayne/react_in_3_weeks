@@ -1,4 +1,4 @@
-import { Context, createContext } from 'react';
+import { Context, createContext, useEffect } from 'react';
 import { Link, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster, toast } from 'react-hot-toast';
 import { Menu } from './components/Menu';
@@ -21,7 +21,6 @@ export const userContext: Context<User> = createContext<User>({});
 export function App() {
   const [cart, setCart] = useState<Array<CartItem>>([]);
   const [user, setUser] = useState<User>({});
-
   return (
     <userContext.Provider value={user}>
       <header id="pageHeader">
@@ -51,7 +50,7 @@ export function App() {
           <Route path='/orders' element={<Orders />} />
           <Route path='/orders/:orderId' element={<Order />} />
           <Route path='/login' element={<Login setUser={setUser} />} />
-          <Route path='/register' element={<Register />} />
+          <Route path='/register' element={<Register setUser={setUser} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

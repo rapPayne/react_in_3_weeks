@@ -26,16 +26,6 @@ export const getOrder = (id: number): Promise<Order> => {
     .catch(err => console.error(`Can't fetch order ${id}`, err))
 }
 
-// export const login = (username: string, password: string) => {
-//   const url = `${baseUrl}/login`;
-//   return fetch(url, {
-//     method: "POST",
-//     headers: { "content-type": "application/json" },
-//     body: JSON.stringify({ username, password })
-//   })
-//     .then(res => res.json())
-//     .catch(err => console.error("Problem logging in.", err));
-// }
 
 export const login = (username: string, password: string): Promise<any> => {
   const url = `${baseUrl}/login`;
@@ -49,6 +39,22 @@ export const login = (username: string, password: string): Promise<any> => {
         return res
       else
         throw new Error('Bad username or password')
+    })
+    .then(res => res.json())
+}
+
+export const register = (user: any): Promise<any> => {
+  const url = `${baseUrl}/register`;
+  return fetch(url, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(user)
+  })
+    .then(res => {
+      if (res.ok)
+        return res
+      else
+        throw new Error('Could not create the new user. Try again')
     })
     .then(res => res.json())
 }

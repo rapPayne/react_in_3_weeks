@@ -20,7 +20,6 @@ export const Cart = ({ cart, changeCartItem, removeFromCart }: Props) => {
   const [expiryMonth, setExpiryMonth] = useState<number | undefined>(user?.creditCard?.expiryMonth)
   const [expiryYear, setExpiryYear] = useState<number | undefined>(user?.creditCard?.expiryYear)
   const [cvv, setCvv] = useState<number | undefined>();
-  console.log({ cart })
   return (
     <>
       <h1>Cart</h1>
