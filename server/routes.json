@@ -1,4 +1,0 @@
-{
-  "/api/*": "/$1",
-  "/login/:username/:password": "/users?email=:username&password=:password"
-}

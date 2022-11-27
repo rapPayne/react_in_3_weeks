@@ -1,9 +1,8 @@
-// server.js
 import jsonServer from 'json-server';
 import cookieParser from 'cookie-parser'
 import { loggingMiddleware } from './middlewares/logging-middleware.mjs';
-import { debugCookieMiddleware, authenticationMiddleware, setIdentityMiddleware } from './middlewares/authentication-middleware.mjs';
-import { placeOrderMiddleware } from './middlewares/order-middleware.mjs';
+import { authRouter } from './middlewares/authentication-middleware.mjs';
+import { getOrdersMiddleware, placeOrderMiddleware } from './middlewares/order-middleware.mjs';
 
 const port = 3008;
 
@@ -17,11 +16,9 @@ app.use(jsonServer.bodyParser)
 app.use(middlewares)
 app.use(cookieParser());
 
-app.use(debugCookieMiddleware)  // Debugging only. console.log the cookie
-app.use(setIdentityMiddleware)  // Read auth cookie. Set req.user.
-app.use(loggingMiddleware)
-app.use(authenticationMiddleware)
+authRouter(app);
 app.use(placeOrderMiddleware)
+app.use(getOrdersMiddleware)
 app.use(router)
 
 app.listen(port, () => {
