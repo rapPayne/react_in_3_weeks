@@ -42,7 +42,7 @@ import { getOrderTotal, getNumberOfDiners } from "./utilities";
 ```
 6.  Run and test. You should see something in all four columns and if you click/tap on an order, you should navigate to the Order view for that particular order.
 
-![List of orders](../images/ListOfOrders.png | width=300)
+![List of orders](../images/ListOfOrders.png | width=300px)
 
 Nice! You did it for the orders, now let's do it for the menu items on a single order.
 
