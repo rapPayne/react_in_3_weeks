@@ -8,6 +8,14 @@ npm install
 npm run load-db
 npm start
 ```
+## To get data from it
+Make GET requests using Postman or [Hoppscotch](http://hoppscotch.io). But you'll need to authenticate to get to certain orders and other things.
+
+## To authenticate
+Make a POST request to /login with {"username": ____, "password": "pass" }. (All passwords are pass until you decide to change them.)
+- Servers are "server1", "server2", and "server3"
+- Admin users are "admin", and "cmac"
+- Regular users are "me", and all the other regular users whose usernames and passwords you can look up in the database.
 
 ## Database collections
 See [database.json](database.json) for the final structure. Here's a general layout.
@@ -52,12 +60,27 @@ TODO: Category should eventually be a collection/enum
   
 
 ## Endpoints
+
+### login (POST)
+### orders (GET, PATCH)
+- authorization: only if user.isServer or user.adminUser or user.id === order.userId
 ### menuItems (GET)
 ### users (GET, PATCH)
-- List of all users by admin users only
-- Single user by that authenticated user only
+- Authorization: Only if admin users only
+- Authorization: Single user by that authenticated user only
 ### placeOrder (POST)
 - POST: body is the entire cart
 - Authenticated user only???
+
+## Order statuses
+| status        | meaning                                       |
+| ------------- | --------------------------------------------- |
+| new           | Guest has placed the order                    |
+| cooking       | Kitchen staff is prepping the order           |
+| readyForGuest | Ready for servers to deliver to the guest     |
+| pickedUp      | It looks accurate. I'm taking it to the guest |
+| delivered     | Guest is happy with the order                 |
+| problem       | The order has one or more issues              |
+| completed     | Paid for. The order is closed.                |
 
 Built on [json-server](https://github.com/typicode/json-server)

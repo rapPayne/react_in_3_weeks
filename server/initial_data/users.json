@@ -13,7 +13,8 @@
       "expiryMonth": 6,
       "expiryYear": 2025
     },
-    "adminUser": true
+    "adminUser": true,
+    "isServer": false
   },
   {
     "id": 2,
@@ -29,7 +30,8 @@
       "expiryMonth": 6,
       "expiryYear": 2025
     },
-    "adminUser": true
+    "adminUser": true,
+    "isServer": false
   },
   {
     "id": 3,
@@ -45,6 +47,31 @@
       "expiryMonth": 6,
       "expiryYear": 2025
     },
-    "adminUser": false
+    "adminUser": false,
+    "isServer": false
+  },
+  {
+    "id": 4,
+    "username": "server1",
+    "password": "pass",
+    "first": "Jo",
+    "last": "Server",
+    "phone": "(555) 123-4567",
+    "email": "server1@daam.com",
+    "imageUrl": "https://minimaltoolkit.com/images/randomdata/female/9.jpg",
+    "adminUser": false,
+    "isServer": true
+  },
+  {
+    "id": 5,
+    "username": "server2",
+    "password": "pass",
+    "first": "Lee",
+    "last": "Server",
+    "phone": "(555) 123-4567",
+    "email": "server2@daam.com",
+    "imageUrl": "https://minimaltoolkit.com/images/randomdata/male/9.jpg",
+    "adminUser": false,
+    "isServer": true
   }
 ]

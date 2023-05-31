@@ -1,12 +1,11 @@
 {
   "name": "server",
-  "version": "0.0.1",
-  "description": "API server with a simple JSON database and fake data",
+  "version": "0.1.0",
+  "description": "Dinner-and-a-Movie restaurant API server with a simple JSON database and fake data",
   "main": "index.js",
   "scripts": {
     "load-db": "node reloadDatabase.mjs",
-    "startDirect": "json-server --watch --config json-server.json ./database.json",
-    "start": "node --watch apiServer.mjs"
+    "start": "node --watch apiServer.mjs --skipAuth"
   },
   "author": "@RapPayne",
   "license": "UNLICENSED",
@@ -15,6 +14,7 @@
   },
   "dependencies": {
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "json-server": "^0.17.0"
   }
 }
