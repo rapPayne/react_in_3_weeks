@@ -4,13 +4,12 @@ This lab will help us get ready to read Ajax data from a server.
 
 1. Edit Menu.js. Notice that the code we provided to you has a useEffect. Take a minute to study it.
 ```JavaScript
-useEffect(() => {
-  fetch(`/api/menuItems`)
-    .then(res => res.json())
-    .then(items => setMenuItems(items))
-}, []);
+  useEffect(() => {
+    getMenuItems()
+      .then(mi => setMenuItems(mi))
+  }, []);
 ```
-Now that we've talked about it, you know that it is there so the fetch will be made __only__ the first time this component is loaded. 
+Now that we've talked about it, you know that the `useEffect` is there so the fetch will be made __only__ the first time this component is loaded and not each time it's rerendered. 
  
 ## Order
 2. In Order.js, we're getting the orderId from a route parameter. Let's add a useEffect similar to the one in App.js to get the one order from our API server.
@@ -41,7 +40,7 @@ useEffect(() => {
 ```
 Don't forget your imports like before. useEffect comes from react. getOrders comes from './utilities.js'.
 
-7. Run and test by navigating to the `http://localhost:3000/orders` route and looking in the devtools network tab. It should be getting back some orders.
+7. Run and test by navigating to the [http://localhost:3000/orders](http://localhost:3000/orders) route and looking in the devtools network tab. It should be getting back some orders.
 
 
 A note on [exhaustive dependencies](/cheatsheet.md/exhaustive-dependencies).

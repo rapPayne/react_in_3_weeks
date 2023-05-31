@@ -15,7 +15,7 @@
 ## Displaying the cart contents
 In a future lab we'll be managing the cart with real data. But for now we'll simulate reading it with a hardcode.
 
-8. Edit Cart.js. Paste this into the file:
+8. Edit Cart.js. Paste this inside the function near the top:
 ```JavaScript
   const cart = [{
     id: 1,

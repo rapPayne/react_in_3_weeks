@@ -3,7 +3,7 @@
 Now that we have a project created, let's create a few components. Do not be overly concerned with how they lay out, how they are styled or even how they work for now. Just get each rendering.
 
 ## Creating the Orders.js component
-1. Create a new file in src called Orders.js.
+1. Create a new file in src called `Orders.js`.
 2. Make its contents look like this.
 ```JavaScript
 export function Orders() {
@@ -15,7 +15,8 @@ export function Orders() {
   );
 }
 ```
-3.	Edit App.js. Find the `<Menu>` tag. Replace it with the Orders tag (`<Orders />`) so you can see it in the browser. (Remember to import it!) Look in the console for your log message. This just proves that it is running.
+3.	Edit `App.js`. Find the `<Menu>` tag. Replace it with the Orders tag (`<Orders />`) so you can see it in the browser. (Remember to import it! Use `import { Orders } from './Orders';
+`) Look in the console for your log message. This just proves that it is running.
 
 Congrats, you've just created a React component and used it in another component! 
 
@@ -28,7 +29,7 @@ Now that you've done it for Menu and Orders, it should be simple to do it for mo
 Can you see it in the browser?
 
 6. Great, now do the same for
-- Order.js
+- Order.js (Yes, singular)
 - Register.js
 - Login.js
 

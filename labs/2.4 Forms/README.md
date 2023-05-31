@@ -26,7 +26,7 @@ That was setting the tip, now let's use it!
 <section>
   <p>Tax: {toCurrency(calculateTax(getCartTotal(cart)))}</p>
   <p>Total: {toCurrency(getCartTotal(cart) + calculateTax(getCartTotal(cart)))}</p>
-  <p>Tip: <input value={tip} onChange={e => setTip(+e.target.value)} type="number" step="0.01" /></p>
+  <div>Tip: <input value={tip} onChange={e => setTip(+e.target.value)} type="number" step="0.01" /></div>
   <p>Amount to charge: {toCurrency(getCartTotal(cart) + calculateTax(getCartTotal(cart)) + (tip || 0))}</p>
 </section>
 ```
@@ -34,12 +34,12 @@ That was setting the tip, now let's use it!
 ```JavaScript
 import { calculateTax, getCartTotal, toCurrency, placeOrder as placeOrderToServer } from './utilities';
 ```
-7.  Run and test. You'll know you have it working right when you can change the tip and watch the totals change with it.
+7.  Run and test. You'll know you have it working right when you can change the tip and watch the amount to charge change with it.
 
 ## Payment info and Location
 Here's a challenge. Try to do the same thing but for the credit card information. We'll give you less instruction this time.
 
-8. Add state variables for `pan`, `expiryMonth`, `expiryYear`, `cvv`, and `location`. 
+8. Add state variables for `pan`, `expiryMonth`, `expiryYear`, and `cvv`. 
 (By the way, the 'pan' is the credit card's primary account number, the 16-digit number and the 'cvv' is the 3-digit code on the back of cards.)
 
 9. Change the `<input>` fields to handle these state variables. (Hint: you'll want to set the `value` property and the `onChange` event.)

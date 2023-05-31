@@ -3,11 +3,15 @@
 
 Let's add client-side routing to our web app. After this lab, the user will be able to navigate from component to component.
 
-1. First, install react-router-dom. from the command line run 
+1. First, install react-router-dom. From the command prompt/terminal window run 
 ```bash
 npm install react-router-dom
 ```
-2. Next, put it in control of your app. Edit index.js and change this line
+Don't forget to start your React app again.
+```bash
+npm run start
+```
+2. Next, put it in control of your app. Edit `index.js` and change this line
 ```JavaScript
 .render(<App />);
 ```
@@ -39,7 +43,7 @@ Again, remember to import `Route` and `Routes` from react-router-dom.
 ```
 Now let's _read_ the parameter.
 
-7. Edit Order.js. Add this to the top:
+7. Edit `Order.js`. Add this to the top:
 ```JavaScript
 import { useParams } from 'react-router-dom';
 ```
@@ -49,12 +53,12 @@ export function Order() {
   const { orderId } = useParams(); // <-Add this line
   console.log("Order", orderId);
 ```
-9. Run and test. If you console.log() the orderId, you should be able to browse to http://localhost:3000/orders/123 and see '123' logged to the console. Try it with several different order numbers.
+9. Run and test. If you `console.log()` the orderId, you should be able to browse to http://localhost:3000/orders/123 and see '123' logged to the console. Try it with several different order numbers.
 
 ## Creating the nav bar Links
 Reloading the app on every hyperlink click is clunky and slow. We should avoid using `<a href="foo>Go to Foo</a>`. Instead we should use `<Link>`.
 
-10. Edit App.js. Find the page `<header>`. Make it look like this.
+10. Edit `App.js`. Find the page `<header>`. Make it look like this.
 ```JavaScript
 <header id="pageHeader">
   <nav>
@@ -66,14 +70,12 @@ Reloading the app on every hyperlink click is clunky and slow. We should avoid u
   </nav>
 </header>
 ```
-Don't forget to import Link.
+Don't forget to import `Link`.
 
 This navigation bar will appear at the top of every view.
 
 11. If you run and test, you should be able to click on any of these links and navigate successfully. Fix any problems you encounter.
 12. Bonus! In the Login.js component, there's a hyperlink that sends the user to the '/register' route. Change that to a `<Link>`
-
-Alright! One more task.
 
 ## Navigating in JavaScript
 When the user navigates to the Orders route, they will eventually see a list of orders. (Right now it's just a single line). We want them to be able to click/tap on any order in that list to navigate to `/orders/<orderId>` and view the details for that order. We *could* make that a `<Link>` but it won't style as nicely as table rows. So we're going to use the `useNavigate` hook.
@@ -86,21 +88,23 @@ export function Orders() {
 ```
 You're adding the "import" and the "const" lines.
 
-14. We currently have only one row in the table. Find it and add a click event to it. When the user clicks on the `<tr>`, they should navigate. Something like this should do:
+1.  We currently have only one `<tr>` in the `<tbody>`. Add a click event such that when the user clicks on the `<tr>`, they should navigate. Something like this should do:
 ```JavaScript
 <tr onClick={() => navigate(`/orders/12345`)}>
 ``` 
-15. Run and test. When you click/tap the row, you should navigate to the order detail for that order.
+1.  Run and test. When you click/tap the row, you should navigate to the order detail for that order.
+
+Alright! One more task.
 
 ## Navigating on a button click
 Let's say when the user logs in, we should route them to the "/home" route.
 
-1.  First, remember to import useNavigate from react-router and call `useNavigate()` to get an instance of the navigate function. 
+1.  Edit Login.js. First, remember to import useNavigate from react-router-dom and call `useNavigate()` to get an instance of the navigate function. 
 
-2.  Edit Login.js. Find the button's click event. Change it to this:
+2.  Find the button's click event. Change it to this:
 ```JavaScript
 function login() {
-  navigate('/home');
+  navigate('/');
 }
 ```
 
@@ -114,5 +118,7 @@ You see nothing where a component should be, right?
     <Route path="*" element={<NotFound />} />
 ```
 Of course it doesn't compile because `<NotFound>` doesn't exist yet.
+
 18.  Create `<NotFound>`. Make it look any way you want. Maybe tell the user "404 Not found" or something? Don't forget to import it in App.js.
+
 19.  Run and test. It's working when you can navigate to any non-existent route and see your new component.

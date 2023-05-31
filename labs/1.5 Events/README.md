@@ -14,6 +14,9 @@ function addToCart(menuItem) {
   console.log(`Adding ${menuItem.name} to the cart`);
 }
 ```
+
+Yes, this is a function inside of a function. Welcome to JavaScript. 😜
+
 4. Run and test. You've got it right when you can click the button and see your message in the [console](../../cheatsheet.md/To-see-something-in-the-browser-console).
 
 ## Wiring the *Place Order* button

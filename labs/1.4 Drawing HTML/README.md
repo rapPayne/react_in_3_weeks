@@ -6,7 +6,7 @@ We’ve got some components created and are able to display them one by one. But
 
 1.	Make `<Login>` the component that is being displayed in App.js.
 2.	Edit Login.js. Change the `<h1>` you added earlier to say, “Log in”.
-3.	Underneath the `<h1>`, add an `<input>` with a `<label>` saying "Username".
+3.	Underneath the `<h1>`, add an `<input id="username">` with a `<label htmlFor="username">` The label should say "Username".
 4.	Add another `<input>` with a `<label>` for "Password".
 5. Add a button that says "Log in".
 6.	Add a link to: `/register` with the text of “Register”
@@ -19,7 +19,20 @@ Writing one of these from scratch was good practice but this isn’t a course ab
 
 8.	Edit App.js and make `<Menu>` the component being shown.
 9.	Now edit Menu.js. Remove the few lines of JSX that you wrote in the earlier labs and replace it with the contents of Menu.starter.jsx which you’ll find in the starters folder we’ve provided for you.
+
+In other words, find this:
+```javascript
+  return (
+    <>
+      <h1>Menu</h1>
+      {menuItem.name}
+    </>
+  )
+```
+And replace it with what's in `Menu.starter.jsx`.
+
 10.	Run and test. Correct any problems you might have in the transpiling and the running. You should be seeing a menu item with a picture, name, description, price, and an 'Add' button.
+![One menu item](../images/OneMenuItem.png)
 
 ## Finishing off the rest
 Now that you’ve implemented the JSX for Menu, do the same for the rest.
@@ -28,6 +41,6 @@ Now that you’ve implemented the JSX for Menu, do the same for the rest.
 12. Next do Order.js.
 13. And finally, do Cart.js.
 
-If there are minor JavaScript errors like variables that are not declared, go ahead and fix them.
+You can ignore linter warnings for now. If there are minor JavaScript errors like variables that are not declared, go ahead and fix them.
 
 We’ve got some great content now. But it isn’t very pretty because we haven’t styled it. Don’t worry. We'll get to that eventually.

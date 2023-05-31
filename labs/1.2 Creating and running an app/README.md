@@ -4,9 +4,10 @@
 * Create the bare-bones app
 * Replace boilerplate with reading data from API server. -->
 
-1. Open a terminal window and run the `npx` command to create a React app called `restaurant`. 
-2. cd to your new folder and run the npm command to serve your new application. You'll know it's working when you can see the out-of-the-box default React app running at http://localhost:3000
-3. Is it running? Cool! Kill it with `control-c`.
+1. Open a terminal window and cd to anywhere except in the `server` folder. Make it someplace you'll remember, like the desktop or something.
+2. Run the `npx` command to create a React app called `restaurant`. 
+3. cd to your new folder and run the npm command to serve your new application. You'll know it's working when you can see the out-of-the-box default React app running at http://localhost:3000
+4. Is it running? Cool! Kill it with `control-c`.
 
 Let's get it reading some data.
 
@@ -22,7 +23,7 @@ Let's get it reading some data.
   "private": true,
 ```
 6. Look in the starters folder for "utilities.js". Copy this into the src folder.
-7. Restart your project with `npm start`
+7. Restart your project with `npm start`. You shouldn't see any difference yet.
 8. Edit src/index.js and make its entire contents look like this.
 ```JavaScript
 import React from 'react';
@@ -34,7 +35,7 @@ ReactDOM
 ```
 Ignore the error message about an export. We'll fix that soon.
 
-9. Create a new file called Menu.js and put this in it
+9. Create a new file in `src` called `Menu.js` and put this in it
 ```JavaScript
 import { useEffect, useState } from 'react';
 import { getMenuItems, toCurrency } from './utilities';

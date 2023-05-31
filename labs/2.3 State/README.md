@@ -5,7 +5,7 @@
 ## Watching useState in action in Menu.js
 1. Edit Menu.js. Remember, it says this:
 ```JavaScript
-export const Menu = ({ addToCart }: Props) => {
+export const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
   useEffect(() => {
     getMenuItems()
@@ -21,9 +21,12 @@ Got it? Now let's do an easy one together.
 ## Creating and setting the cart
 3. Edit App.js and add these state variables.
 ```JavaScript
-const [cart, setCart] = useState([]);
-const [user, setUser] = useState({});
-console.log({ cart });
+export function App() {
+  const [cart, setCart] = useState([]); // <-- Add this
+  const [user, setUser] = useState({}); // <-- Add this
+  console.log({ cart });
+  return (
+    ...
 ```
 Remember to `import { useState } from 'react';`.
 
@@ -63,7 +66,7 @@ useEffect(() => {
     });
 }, []);
 ```
-5. Run and test. Do you see the item in your test cart? Cool. We'll need this later.
+5. Run your app and look for your cart in the console. Do you see the item in your test cart? Cool. We'll need this later.
 
 ## Saving an order to state
 In Order.js we're reading the order already. Now let's write it to state.
@@ -81,7 +84,7 @@ useEffect(() => {
     .then(mi => setMenuItems(mi)); // <-- And this line
 }, [orderId]);
 ```
-3. Feel free to `console.log({order, menuItems})` to make sure they're reading data.
+3. Test this route with some valid order numbers. Remember to look in [http://localhost:3008/orders](http://localhost:3008/orders) to find a good order number. Feel free to `console.log({order, menuItems})` to make sure they're reading data.
 
 ## Saving orders to state
 Let's do one last one. 
@@ -89,6 +92,7 @@ Let's do one last one.
 1.  Edit Orders.js. Change the reader from this
 ```JavaScript
 export function Orders() {
+  const navigate = useNavigate();
   useEffect(() => {
     getOrders()
   }, []);
@@ -96,12 +100,12 @@ export function Orders() {
 to this
 ```JavaScript
 export function Orders() {
+  const navigate = useNavigate();
   const [orders, setOrders] = useState([]); // <-- Add this
   useEffect(() => {
     getOrders()
       .then(os => setOrders(os))  // <-- And this
   }, []);
 ```
-
 
 You're done!
