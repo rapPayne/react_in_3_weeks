@@ -41,7 +41,8 @@ import { getOrderTotal, getNumberOfDiners } from "./utilities";
 <td>{getNumberOfDiners(order)}</td>
 ```
 6.  Run and test. You should see something in all four columns and if you click/tap on an order, you should navigate to the Order view for that particular order.
-![List of orders](../images/ListOfOrders.png)
+
+![List of orders](../images/ListOfOrders.png | width=300)
 
 Nice! You did it for the orders, now let's do it for the menu items on a single order.
 
@@ -50,7 +51,7 @@ If you look at Order.js, you'll see that we are gathering all the lines of the o
 
 1.  Edit Order.js. Find the `<tr>` that should be repeated.
 2.  See if you can figure out how to `map()` over the rows, interpolating all the values. 
-3.  Bonus!! While we're here, display all the remaining order data. First `import { getNumberOfDiners, getOrderTotal } from "./utilities";` then use those functions in expressions. Display the other pieces of data as well, like customer's userId, credit card pan, location, order time, and so on.
+3.  Bonus!! While we're here, display all the remaining order data. First `import { getOrder, getMenuItem, getMenuItems, getNumberOfDiners, getOrderTotal } from './utilities';` then use those functions in expressions. Display the other pieces of data as well, like customer's userId, credit card pan, location, order time, and so on.
 
 If you need some hints, here's a solution:
 <details>
