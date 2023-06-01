@@ -1,4 +1,4 @@
-Notes: Good examples of Signals: https://www.reddit.com/r/Angular2/comments/13qgyl5/state_management_in_angular_16_just_feels_right/?%24deep_link=true&correlation_id=232ea864-c29b-40a1-871d-fe8b01a5935e&post_fullname=t3_13qgyl5&post_index=5&ref=email_digest&ref_campaign=email_digest&ref_source=email&utm_content=post_title
+<!-- Notes: Good examples of Signals: https://www.reddit.com/r/Angular2/comments/13qgyl5/state_management_in_angular_16_just_feels_right/?%24deep_link=true&correlation_id=232ea864-c29b-40a1-871d-fe8b01a5935e&post_fullname=t3_13qgyl5&post_index=5&ref=email_digest&ref_campaign=email_digest&ref_source=email&utm_content=post_title -->
 
 
 # Setting up the environment
