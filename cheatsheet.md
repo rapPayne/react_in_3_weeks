@@ -2,6 +2,9 @@
 
 ## JavaScript things
 
+### Exception handling
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
+
 ## HTML things
 
 ## CSS things
@@ -31,3 +34,5 @@ When useEffect has a dependency which is not listed in the dependency array, you
 
 However we are very aware of the controversy around this topic and the confusion caused by it so, for the purposes of a beginner class that already has a HUGE concept count, we've chosen to not make a big deal of emphasizing exhaustive dependencies. Our goal is for people to learn best practices but not at the expense of them quitting because "React is too hard to learn." Please don't judge us too harshly; we all have to make tradeoffs.  
 
+### Redux
+https://leanpub.com/redux-book
