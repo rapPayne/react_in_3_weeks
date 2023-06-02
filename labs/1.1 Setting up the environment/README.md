@@ -1,8 +1,22 @@
-<!-- Notes: Good examples of Signals: https://www.reddit.com/r/Angular2/comments/13qgyl5/state_management_in_angular_16_just_feels_right/?%24deep_link=true&correlation_id=232ea864-c29b-40a1-871d-fe8b01a5935e&post_fullname=t3_13qgyl5&post_index=5&ref=email_digest&ref_campaign=email_digest&ref_source=email&utm_content=post_title -->
-
 
 # Setting up the environment
 <!-- Time: 10 min -->
+
+
+## Downloading starters and solutions
+1. Make sure you have the prerequisites to install this.
+- git
+- node 18.11 or better
+
+2. Get this whole repository and sub-repositories
+```bash
+git clone git@github.com:rapPayne/react_in_3_weeks.git
+cd react_in_3_weeks
+git submodule init
+git submodule update
+```
+
+## Starting the API data server
 1. Open a command prompt. cd to the [server](../../server) folder and run this.
 ```bash
 npm install
