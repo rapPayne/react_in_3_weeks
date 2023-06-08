@@ -1,5 +1,5 @@
 # Forms in React
-<!-- Time: 15 minutes -->
+<!-- Time: 20 minutes -->
 
 ## Menu.js
 1. Run the app and look at the Cart. Note that it has an item in it because of an earlier lab where we hardcoded it to have a garden salad.

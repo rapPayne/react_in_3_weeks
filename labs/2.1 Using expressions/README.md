@@ -29,7 +29,8 @@ In a future lab we'll be managing the cart with real data. But for now we'll sim
   }]
   const cartItem = cart[0];
 ```
-9. Look in the JSX. Find a placeholder that says `CART_ITEM_NAME_HERE`. Make it display the actual item name here. Hint: Put `cartItem.name` in curly braces.
+
+9. Look in the JSX. Find a placeholder that says `CART_ITEM_NAME_HERE`. Make it display the actual item name here. (Hint: Put `cartItem.name` in curly braces.)
 10. Run and test. Make sure you can see "Garden salad" on the rendered web page.
 11. Now do the same for `CART_ITEM_CATEGORY_HERE`.
 12. And do it one last time for `CART_ITEM_PRICE_HERE`

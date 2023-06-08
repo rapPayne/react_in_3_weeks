@@ -53,7 +53,7 @@ function changeCartItem(newCartItem) {
 ```
 You'll also need to `import { getNextCartItemId } from './utilities';`
 
-5. Study these for a minute. Notice how they each call `setcart`, replacing the entire cart with a modified *copy* of that cart.
+5. Study these for a minute. Notice how they each call `setCart`, replacing the entire cart with a modified *copy* of that cart.
 
 6. Let's do a quick test. Add this to the component.
 ```JavaScript
