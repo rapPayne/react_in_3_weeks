@@ -1,10 +1,7 @@
-import logo from './logo.svg';
-import { useEffect } from 'react'
 import './App.css';
 import { People } from './People';
 
 function App() {
-  //useEffect(() => document.title = "People", [])
   return (
     <>
       <header>
