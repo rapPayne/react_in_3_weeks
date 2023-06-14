@@ -7,7 +7,6 @@ export function People() {
   const person = people[0] || { name: {}, location: {}, picture: {} }
   useEffect(() => { fetchPeople(3) }, [])
 
-  console.log({ person })
   return (
     <>
       <h1>All the cool people</h1>

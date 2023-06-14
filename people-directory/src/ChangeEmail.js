@@ -6,7 +6,7 @@ export function ChangeEmail(props) {
     <>
       <h1>Change email</h1>
       <p>{email}</p>
-      <label for="email">New email address</label>
+      <label htmlFor="email">New email address</label>
       <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" id="email" />
       <button onClick={() => { }}>Save</button>
     </>
