@@ -12,6 +12,7 @@ export const Orders = () => {
       .then((res: any) => { console.log(res); return res; })
       .then((res: Array<any>) => res.map((o: any) => ({ ...o, orderTime: new Date(o.orderTime), pickupTime: new Date(o.pickupTime) })))
       .then((o: OrderType[]) => setOrders(o))
+      .catch(err => console.error(err))
   }, []);
 
   return (
