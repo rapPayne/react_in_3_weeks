@@ -8,12 +8,9 @@
 - git
 - node 18.11 or better
 
-2. Get this whole repository and sub-repositories
+2. Get this whole repository and sub-repositories. (Note the --recurse-submodules flag. It's important)
 ```bash
-git clone git@github.com:rapPayne/react_in_3_weeks.git
-cd react_in_3_weeks
-git submodule init
-git submodule update
+git clone --recurse-submodule git@github.com:rapPayne/react_in_3_weeks.git
 ```
 
 ## Starting the API data server
