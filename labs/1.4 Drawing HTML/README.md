@@ -1,5 +1,5 @@
 # Drawing HTML
-<!-- Time: 20min -->
+<!-- Time: 15min -->
 We’ve got some components created and are able to display them one by one. But they’re pretty boring so far because there’s nothing in them. Let’s fix that in this lab by putting some JSX to draw something more interesting.
 
 ## Writing one from scratch

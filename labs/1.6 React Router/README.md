@@ -47,12 +47,14 @@ Now let's _read_ the parameter.
 ```JavaScript
 import { useParams } from 'react-router-dom';
 ```
+
 8. Add a new line after the `function` line
 ```JavaScript
 export function Order() {
   const { orderId } = useParams(); // <-Add this line
   console.log("Order", orderId);
 ```
+
 9. Run and test. If you `console.log()` the orderId, you should be able to browse to http://localhost:3000/orders/123 and see '123' logged to the console. Try it with several different order numbers.
 
 ## Creating the nav bar Links

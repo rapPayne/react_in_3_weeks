@@ -56,7 +56,7 @@ git submodule add git@github.com:rapPayne/daam-server.git server
 ```
 So as a separate project, you won't make changes here, you'll make changes in the https://github.com/rapPayne/daam-server project.
 
-- If changes were made remotely, `cd server` and `git fetch`
+- If changes were made remotely, `git submodule update --remote`
 - If you screw up and accidentally make changes locally, `cd server` and `git submodule update --remote --merge`. Much better to make them in the actual daam-server project.
 
 
@@ -66,5 +66,5 @@ So as a separate project, you won't make changes here, you'll make changes in th
 - Github: [RapPayne](https://github.com/rapPayne)
 - Reddit: [RapPayne](https://www.reddit.com/u/rapPayne)
 
-Copyright &copy; 2022 Agile Gadgets LLC. 
+Copyright &copy; 2023 Agile Gadgets LLC. 
 All rights reserved. You may not republish or copy any part of this repository except for your own personal learning. If you want to use this as courseware for a React course, contact [@RapPayne](http://github.com/RapPayne) to obtain a license. 
