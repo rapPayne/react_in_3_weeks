@@ -1,8 +1,7 @@
-import { Menu } from './Menu';
-import { Order } from './Order';
-import { Orders } from './Orders';
 import { Cart } from './Cart';
 import { Login } from './Login';
+import { Menu } from './Menu';
+import { Orders } from './Orders';
 export function App() {
   return (
     <>
@@ -11,7 +10,7 @@ export function App() {
         </nav>
       </header>
       <main>
-        <Login />
+        <Menu />
       </main>
       <footer></footer>
     </>
