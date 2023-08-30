@@ -4,6 +4,7 @@ Now that we have a project created, let's create a few components. Do not be ove
 
 ## Creating the Orders.js component
 1. Create a new file in src called `Orders.js`.
+
 2. Make its contents look like this.
 ```JavaScript
 export function Orders() {
@@ -15,8 +16,8 @@ export function Orders() {
   );
 }
 ```
-3.	Edit `App.js`. Find the `<Menu>` tag. Replace it with the Orders tag (`<Orders />`) so you can see it in the browser. (Remember to import it! Use `import { Orders } from './Orders';
-`) Look in the console for your log message. This just proves that it is running.
+
+3.	Edit `App.js`. Find the `<Menu>` tag. Replace it with the Orders tag (`<Orders />`) so you can see it in the browser. (Remember to import it! Use `import { Orders } from './Orders';`) Look in the console for your log message. This just proves that it is running.
 
 Congrats, you've just created a React component and used it in another component! 
 
@@ -24,6 +25,7 @@ Congrats, you've just created a React component and used it in another component
 Now that you've done it for Menu and Orders, it should be simple to do it for more.
 
 4. Copy Orders.js into a new file called Cart.js. Of course change the name of the function, the `<h1>`, and console.log() to "Cart".
+
 5. Change App.js to show your new Cart component.
 
 Can you see it in the browser?

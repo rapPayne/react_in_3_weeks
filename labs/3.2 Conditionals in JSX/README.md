@@ -22,7 +22,7 @@ export function Login(props) {
   const setUser = props.setUser;
 ```
 
-1. When the user clicks the Login button, you're already calling `login`, so alter that function to submit a *real* request to the server. Make the `login` function look like this:
+3. When the user clicks the Login button, you're already calling `login`, so alter that function to submit a *real* request to the server. Make the `login` function look like this:
 ```JavaScript
 function login() {
   loginToServer(username, password)
@@ -33,55 +33,55 @@ function login() {
 
 If the user enters a good username/password, their personal information is now stored in the user variable and they'll be forwarded to the `Cart` route.
 
-5. Run and test with a good username/password and a bad one. Make sure one logs you in and the other does not.
+4. Run and test with a good username/password and a bad one. Make sure one logs you in and the other does not.
 
 ## Only show the log in option if they're logged out
 We can now authenticate a user to our site. If the user is logged in, there's no need to show them the 'Log in' option in the menu. So if they have a token, display `null`.
 
-6. Edit App.js. Find the menu `<Link>` for "Log in". Put a conditional on it:
+1. Edit App.js. Find the menu `<Link>` for "Log in". Put a conditional on it:
 ```JavaScript
 {user.token ? null : <Link to="/login">Log in</Link>}
 ```
 This says if there's a user token show nothing. Otherwise, show them the link.
 
-7. Run and test. If you're not logged in, you should see the menu option. But if you're not, it should be blank.
+2. Run and test. If you're not logged in, you should see the menu option. But if you are, it should be blank.
 
 ## Allowing the user to log out
 Let's show a logged-in user a menu option to log themselves out.
 
-8. Add another menu option to your main menu:
+1. Add another menu option to your main menu:
 ```JavaScript
 {user.token && <Link to="#" onClick={() => setUser({})}>Log out</Link>}
 ```
 
 This says if the user token exists, show them the logout link. Otherwise, show nothing.
 
-9. Run and test. You should be able to click that link at any time to de-authenticate yourself.
+2. Run and test. You should be able to click that link at any time to de-authenticate yourself.
 
 ## Detecting the user
 One last task. If the user is not logged in, the Cart component should render a 'Log in' button.
 
-10. In App.js, pass `user` down to `<Cart>` as a prop. (Hint: `user={user}`).
+1. In App.js, pass `user` down to `<Cart>` as a prop. (Hint: `user={user}`).
 
-11. Edit Cart.js. Read the user prop. (Hint: `const user = props.user`).
+2. Edit Cart.js. Read the user prop. (Hint: `const user = props.user`).
 
-12. Prepare to route to login by importing useNavigate from react-router-dom and calling it:
+3. Prepare to route to login by importing useNavigate from react-router-dom and calling it:
 ```JavaScript
 const navigate = useNavigate();
 ```
 
-13. Add a button anywhere you like on the page:
+4. Add a button anywhere you like on the page:
 ```HTML
 <button onClick={() => navigate('/login')}>Log in</button>
 ```
 
 At this point, clicking on the `<button>` will work just great. But we don't want to display this button for someone who's already logged in.
 
-14. Here's a challenge for you. With fewer instructions, make this button appear only if `user.token` is [falsey](https://developer.mozilla.org/en-US/docs/Glossary/Falsy). (Hint: Look at how we've done that earlier).
+5. Here's a challenge for you. With fewer instructions, make this button appear only if `user.token` is [falsey](https://developer.mozilla.org/en-US/docs/Glossary/Falsy). (Hint: Look at how we've done that earlier).
 
 
 ## Bonus!! Reading the other data.
-Remember that a major goal for this lab was to use the user data, to pre-populate the data in the cart.
+Remember that a major goal for this lab was to use the user data, especially to pre-populate the data in the cart.
 
 1. In Cart.js, in the state setters initial data, use the user data to pre-populate the form info. Here's an example for the credit card PAN (primary account number):
 ```JavaScript

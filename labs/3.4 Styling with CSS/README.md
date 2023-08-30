@@ -14,6 +14,7 @@ In the last lab we focused on making individual components look good. In this on
 ```JavaScript
 import './site.css';
 ```
+
 2. Now create the site.css file. Use any colors and fonts you like.
 ```CSS
 :root {
@@ -29,14 +30,15 @@ import './site.css';
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 ```
+
 2. Run and test. See the changes?
 
 ## Styling across the site
 Our buttons could use some love.
 
-3. Make sure you're looking at the Menu. Notice the buttons.
+1. Make sure you're looking at the Menu. Notice the buttons.
 
-4. Add this to site.css
+2. Add this to site.css
 ```CSS
 button {
   padding: 13px;
@@ -48,12 +50,12 @@ button {
 }
 ```
 
-5. Save the file and when the browser refreshes, look at your buttons now. Cool, right?
+3. Save the file and when the browser refreshes, look at your buttons now. Cool, right?
 
 ## Formatting the navigation menu
 Look at the menu at the top of every view. Looks like it could use a little help, doesn't it? Let's format it.
 
-6. Edit site.css. Add these lines:
+1. Edit site.css. Add these lines:
 ```CSS
 #pageHeader {
   position: fixed;
@@ -74,6 +76,6 @@ Look at the menu at the top of every view. Looks like it could use a little help
 }
 ```
 
-9.  When it refreshes, take a look at your top nav menu in the browser. 
+2.  When it refreshes, take a look at your top nav menu in the browser. 
 
-10. Bonus! Comb through your site for any styles that you think can be improved and fix them.
+3. Bonus! Comb through your site for any styles that you think can be improved and fix them.

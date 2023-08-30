@@ -22,7 +22,7 @@ npm run start
 ```
 You should see a message that the RESTful API data server is running on port 3008. 
 
-*** Leave this server running at all times ***
+== Leave this server running at all times ==
 
 2. Open any browser and browse to http://localhost:3008/menuitems
 3. If you see JSON data, your server is running.

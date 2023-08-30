@@ -5,8 +5,11 @@
 * Replace boilerplate with reading data from API server. -->
 
 1. Open a terminal window and cd to anywhere except in the `server` folder. Make it someplace you'll remember, like the desktop or something.
+
 2. Run the `npx` command to create a React app called `restaurant`. 
+
 3. cd to your new folder and run the npm command to serve your new application. You'll know it's working when you can see the out-of-the-box default React app running at http://localhost:3000
+
 4. Is it running? Cool! Kill it with `control-c`.
 
 Let's get it reading some data.
@@ -14,6 +17,7 @@ Let's get it reading some data.
 ## Reading from our API data server
 
 4. Open your restaurant project in an IDE like VSCode.
+
 5. Edit `package.json`. Add a "proxy" line anywhere at the top level.
 ```json
 {
@@ -22,8 +26,11 @@ Let's get it reading some data.
   "version": "0.1.0",
   "private": true,
 ```
+
 6. Look in the starters folder for "utilities.js". Copy this into the src folder.
+
 7. Restart your project with `npm start`. You shouldn't see any difference yet.
+
 8. Edit src/index.js and make its entire contents look like this.
 ```JavaScript
 import React from 'react';

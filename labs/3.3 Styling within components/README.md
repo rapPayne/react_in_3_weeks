@@ -48,6 +48,7 @@ const styles = {
 ```HTML
 <section style={styles.itemCard}>
 ```
+
 5. Refresh it. See the change in layout?
 
 6. Add a `style={styles.image}` to the `<img>`. Again, refresh and examine.
