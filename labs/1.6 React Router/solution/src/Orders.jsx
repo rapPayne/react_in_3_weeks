@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 export function Orders() {
   const navigate = useNavigate();
-  console.log("Orders");
   return (
     <>
       <h1>Orders</h1>
