@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import { getNextCartItemId } from './utilities';
-import { Menu } from './Menu';
-import { Order } from './Order';
-import { Orders } from './Orders';
 import { Cart } from './Cart';
 import { Login } from './Login';
-import { Register } from './Register';
+import { Menu } from './Menu';
 import { NotFound } from './NotFound';
+import { Order } from './Order';
+import { Orders } from './Orders';
+import { Register } from './Register';
+
 export function App() {
-  const [cart, setCart] = useState([]);
-  const [user, setUser] = useState({});
+  const [cart, setCart] = useState([]); // <-- Add this
+  const [user, setUser] = useState({}); // <-- Add this
+  console.log({ cart });
   useEffect(() => {
     addToCart({
       id: 17,
@@ -18,14 +20,7 @@ export function App() {
       category: "entrees",
       price: 10.54,
     });
-    addToCart({
-      id: 23,
-      name: "Test item 3",
-      category: "entrees",
-      price: 8.99,
-    });
   }, []);
-  console.log({ cart });
   return (
     <>
       <header id="pageHeader">
@@ -41,8 +36,8 @@ export function App() {
         <Routes>
           <Route path='/' element={<Menu addToCart={addToCart} />} />
           <Route path='/cart' element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
-          <Route path="/orders/:orderId" element={<Order />} />
           <Route path='/orders' element={<Orders />} />
+          <Route path="/orders/:orderId" element={<Order />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
           <Route path="*" element={<NotFound />} />
@@ -51,6 +46,7 @@ export function App() {
       <footer></footer>
     </>
   );
+
   // Converts a menuItem to a cartItem and adds it to the cart.
   function addToCart(menuItem) {
     const cartItem = {

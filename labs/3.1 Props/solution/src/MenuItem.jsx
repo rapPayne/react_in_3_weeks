@@ -1,8 +1,9 @@
 import { toCurrency } from './utilities';
 
-export function MenuItem(props) {
-  const addToCart = props.addToCart;
+export const MenuItem = (props) => {
   const menuItem = props.menuItem;
+  const addToCart = props.addToCart;
+
   return (
     <section key={menuItem.id}>
       <div>
