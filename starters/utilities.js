@@ -1,6 +1,6 @@
 const taxRate = 0.0825;
 const baseUrl = `/api`;
-let jwtToken = "";
+export let jwtToken = "";
 
 export const getMenuItems = () => {
   const url = `${baseUrl}/menuItems`;
@@ -8,6 +8,15 @@ export const getMenuItems = () => {
     .then((res) => {
       if (res.ok) return res.json();
       else throw new Error(`Can't fetch menuItems: ${res.status} ${res.statusText}`)
+    })
+}
+
+export const getMenuItem = (id) => {
+  const url = `${baseUrl}/menuItems/${id}`;
+  return fetch(url)
+    .then((res) => {
+      if (res.ok) return res.json();
+      else throw new Error(`Can't fetch menuItem with an id of '${id}': ${res.status} ${res.statusText}`)
     })
 }
 
