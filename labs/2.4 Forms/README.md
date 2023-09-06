@@ -1,14 +1,14 @@
 # Forms in React
 <!-- Time: 20 minutes -->
 
-## Menu.js
+## Menu.jsx
 1. Run the app and look at the Cart. Note that it has an item in it because of an earlier lab where we hardcoded it to have a garden salad.
 
 2. Also notice that there are `<input>`s to put the gratuity/tip, the "deliver to" location,  and the credit card info. 
 
 These don't save their data anywhere. Let's fix that. We'll start with the tip.
 
-3. Edit Cart.js and create a state variable:
+3. Edit Cart.jsx and create a state variable:
 ```JavaScript
 const [tip, setTip] = useState(0);
 ```
@@ -22,7 +22,7 @@ Hint: The `+` sign is there to convert a string to a number.
 That was setting the tip, now let's use it!
 
 ## Showing the cart totals
-1. Still in Cart.js, find the `<section>` that has notes about displaying the TAX_HERE, CART_TOTAL_HERE, and GRAND_TOTAL_HERE. Make it look like this:
+1. Still in Cart.jsx, find the `<section>` that has notes about displaying the TAX_HERE, CART_TOTAL_HERE, and GRAND_TOTAL_HERE. Make it look like this:
 ```JavaScript
 <section>
   <p>Tax: {toCurrency(calculateTax(getCartTotal(cart)))}</p>
@@ -32,7 +32,7 @@ That was setting the tip, now let's use it!
 </section>
 ```
 
-2. Obviously you'll need those utility functions. Add these to the top of Cart.js:
+2. Obviously you'll need those utility functions. Add these to the top of Cart.jsx:
 ```JavaScript
 import { calculateTax, getCartTotal, toCurrency, placeOrder as placeOrderToServer } from './utilities';
 ```
@@ -53,7 +53,7 @@ Here's a challenge. Try to do the same thing but for the credit card information
 
 ## Login
 
-1. Last one for now. Edit Login.js. Add two state variables for
+1. Last one for now. Edit Login.jsx. Add two state variables for
 ```JavaScript
 const [username, setUsername] = useState("");
 const [password, setPassword] = useState("");

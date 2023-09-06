@@ -5,8 +5,8 @@ This lab is all about aesthetics! Your opinions about looks may differ. Don't be
 
 ## Making the menu items look nice
 
-1. Add a new object to your code in Menu.js.
-```JavaScript
+1. Add a new object to your code in Menu.jsx.
+```javascript
 const styles = {
   wrapper: {
     display: "flex",
@@ -15,7 +15,7 @@ const styles = {
   },
 };
 ```
-2. In Menu.js, make this ...
+2. In Menu.jsx, make this ...
 ```HTML
 <section id="itemsWrapper">
 ```
@@ -25,9 +25,9 @@ look like this:
 <section style={styles.wrapper} id="itemsWrapper">
 ```
 
-We just applied a style to `<section>` that encloses each menu item. You may have seen a slight change when you saved Menu.js. Now let's finish this off in MenuItem.js.
+We just applied a style to `<section>` that encloses each menu item. You may have seen a slight change when you saved Menu.jsx. Now let's finish this off in MenuItem.jsx.
 
-3. Add a styles object to MenuItem.js:
+3. Add a styles object to MenuItem.jsx:
 ```JavaScript
 const styles = {
   itemCard: {
@@ -62,7 +62,7 @@ At this point you can begin getting creative. We'll give you less instruction.
 9. Add styles in the styles object and in the JSX that you think need it.
 
 Maybe let this be a goal:
-![Screenshot of Menu component](../images/Menu_view.png "Menu")
+![Screenshot of Menu component](../images/Menu_layout_suggestion.png "Menu")
 
 Obviously you'll need to lean on your CSS skills to do this. If you don't know CSS well, here is a [cool cheatsheet](https://htmlcheatsheet.com/css/).
 

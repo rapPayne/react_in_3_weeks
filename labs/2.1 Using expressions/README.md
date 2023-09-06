@@ -2,7 +2,7 @@
 <!-- Time: 15 min -->
 
 ## Understanding the pre-written code
-1. Edit Menu.js. Examine the code you entered in an earlier lab. It extracts one food item and displays it.
+1. Edit Menu.jsx. Examine the code you entered in an earlier lab. It extracts one food item and displays it.
 
 2. Find the `<img>` tag. Notice how we're using expressions in curly braces to provide the src attribute and the alt attribute.
 
@@ -11,7 +11,7 @@
 4. Find the `<p>` tag with the price. Notice how we can run the `toCurrency` function in expressions. Functions calls are legal expressions!
 
 ## Displaying the order number
-1. Edit Order.js. Remember that we're reading the orderId as a route parameter and console.log()ging it.
+1. Edit Order.jsx. Remember that we're reading the orderId as a route parameter and console.log()ging it.
 
 2. Find the `ORDER_ID_HERE` placeholder and make it show the orderId instead using an expression.
 <details>
@@ -28,7 +28,7 @@
 ## Displaying the cart contents
 In a future lab we'll be managing the cart with real data. But for now we'll simulate reading it with a hardcode.
 
-1. Edit Cart.js. Paste this inside the function near the top:
+1. Edit Cart.jsx. Paste this inside the function near the top:
 ```JavaScript
   const cart = [{
     id: 1,
@@ -48,7 +48,7 @@ In a future lab we'll be managing the cart with real data. But for now we'll sim
 <summary>Expand for a possible solution</summary>
 
 ```html
-<p>{cartItem.name}</p>
+<h2>{cartItem.name}</h2>
 ```
 </details>
 

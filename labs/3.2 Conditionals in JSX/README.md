@@ -6,12 +6,12 @@ The user loads his cart with meals for the table. They then need to check out. I
 ## Allow the user to log in
 When the user logs in, we will write a `user` to state. It will hold their personal information like name, and payment information. Let's start with the state variable.
 
-1. The `setUser` function exists in App.js but they'll be setting the user object in Login.js, so in App.js, pass `setUser` down to `<Login>` like this:
+1. The `setUser` function exists in App.jsx but they'll be setting the user object in Login.jsx, so in App.jsx, pass `setUser` down to `<Login>` like this:
 ```HTML
 <Login setUser={setUser} />
 ```
 
-2. In Login.js, read `setUser` as a prop, create your state variables and import login from utilities.js. Change this:
+2. In Login.jsx, read `setUser` as a prop, create your state variables and import login from utilities.js. Change this:
 ```JavaScript
 export function Login() {
 ```
@@ -33,25 +33,25 @@ function login() {
 
 If the user enters a good username/password, their personal information is now stored in the user variable and they'll be forwarded to the `Cart` route.
 
-4. Run and test with a good username/password and a bad one. Make sure one logs you in and the other does not.
+4. Run and test with a good username/password and a bad one. Make sure one logs you in and the other does not. Remember, all passwords are "pass" and a couple of good users are "me", "server1", and "server2".
 
 ## Only show the log in option if they're logged out
-We can now authenticate a user to our site. If the user is logged in, there's no need to show them the 'Log in' option in the menu. So if they have a token, display `null`.
+We can now authenticate a user to our site! If the user is logged in, there's no need to show them the 'Log in' option in the menu. So if they have a token, display `null`.
 
-1. Edit App.js. Find the menu `<Link>` for "Log in". Put a conditional on it:
+1. Find the menu `<Link>` for "Log in". Put a conditional on it:
 ```JavaScript
-{user.token ? null : <Link to="/login">Log in</Link>}
+{user ? null : <Link to="/login">Log in</Link>}
 ```
-This says if there's a user token show nothing. Otherwise, show them the link.
+This says if there's a user show nothing. Otherwise, show them the link.
 
-2. Run and test. If you're not logged in, you should see the menu option. But if you are, it should be blank.
+2. Run and test. If you're not logged in, you should see the "Log in" menu option. But if you are, it should be blank.
 
 ## Allowing the user to log out
 Let's show a logged-in user a menu option to log themselves out.
 
 1. Add another menu option to your main menu:
 ```JavaScript
-{user.token && <Link to="#" onClick={() => setUser({})}>Log out</Link>}
+{user && <Link to="#" onClick={() => setUser()}>Log out</Link>}
 ```
 
 This says if the user token exists, show them the logout link. Otherwise, show nothing.
@@ -61,12 +61,12 @@ This says if the user token exists, show them the logout link. Otherwise, show n
 ## Detecting the user
 One last task. If the user is not logged in, the Cart component should render a 'Log in' button.
 
-1. In App.js, pass `user` down to `<Cart>` as a prop. (Hint: `user={user}`).
+1. In App.jsx, pass `user` down to `<Cart>` as a prop. (Hint: `user={user}`).
 
-2. Edit Cart.js. Read the user prop. (Hint: `const user = props.user`).
+2. Edit Cart.jsx. Read the user prop. (Hint: `const user = props.user`).
 
 3. Prepare to route to login by importing useNavigate from react-router-dom and calling it:
-```JavaScript
+```javascript
 const navigate = useNavigate();
 ```
 
@@ -77,14 +77,14 @@ const navigate = useNavigate();
 
 At this point, clicking on the `<button>` will work just great. But we don't want to display this button for someone who's already logged in.
 
-5. Here's a challenge for you. With fewer instructions, make this button appear only if `user.token` is [falsey](https://developer.mozilla.org/en-US/docs/Glossary/Falsy). (Hint: Look at how we've done that earlier).
+5. Here's a challenge for you. With fewer instructions, make this button appear only if `user` is [falsey](https://developer.mozilla.org/en-US/docs/Glossary/Falsy). (Hint: Look at how we've done that earlier).
 
 
 ## Bonus!! Reading the other data.
 Remember that a major goal for this lab was to use the user data, especially to pre-populate the data in the cart.
 
-1. In Cart.js, in the state setters initial data, use the user data to pre-populate the form info. Here's an example for the credit card PAN (primary account number):
-```JavaScript
+1. In Cart.jsx, in the state setters initial data, use the user data to pre-populate the form info. Here's an example for the credit card PAN (primary account number):
+```javascript
 const [pan, setPan] = useState(user?.creditCard?.PAN);
 ```
 

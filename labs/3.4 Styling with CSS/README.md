@@ -1,8 +1,7 @@
 # Styling with stylesheets
 <!-- Time: 10 minutes -->
 
-<!-- TODO: RAP, make the finalized version look great and then move it here.
-TODO: Use css to make the .cartItem look good.
+<!-- TODO: 
 Main menu
 cartItem
 Responsive design -->
@@ -28,6 +27,8 @@ import './site.css';
   background-color: var(--light1);
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  margin-top: 50px;
 }
 ```
 
@@ -62,17 +63,19 @@ Look at the menu at the top of every view. Looks like it could use a little help
   top: 0;
   right: 0;
   left: 0;
-}
-#pageHeader nav {
-  display: flex;
-  background-color: var(--dark2);
-}
-#pageHeader nav a {
-  color: var(--light1);
-  text-decoration: none;
-  padding: 10px;
-  margin: 10px;
-  text-transform: uppercase;
+
+  & nav {
+    display: flex;
+    background-color: var(--dark2);
+
+    & a {
+      color: var(--light1);
+      text-decoration: none;
+      padding: 10px;
+      margin: 10px;
+      text-transform: uppercase;
+    }
+  }
 }
 ```
 

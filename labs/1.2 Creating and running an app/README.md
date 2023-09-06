@@ -18,6 +18,11 @@ npm create vite
 
 4. Is it running? Cool! Kill it with `control-c`.
 
+5. Our server handles authentication using JWT tokens. To make things easier on us later, go ahead and run this from the command line:
+```bash
+npm install jwt-decode@^3
+```
+
 Let's get it reading some data.
 
 ## Reading from our API data server
