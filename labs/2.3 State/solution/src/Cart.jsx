@@ -1,5 +1,5 @@
 export function Cart() {
-  const cartItem = {
+  const cart = [{
     id: 1,
     name: "Garden salad",
     description: "Meal-sized portion. garden greens, tomatoes, peppers, celery, carrots",
@@ -8,16 +8,17 @@ export function Cart() {
     imageUrl: "images/salad_1.jpg",
     available: true,
     itemId: 300
-  }
-  console.log("Cart");
+  }];
+  const cartItem = cart[0];
   return (
     <>
       <h1>Cart</h1>
       <section className="cartItem">
-        <p>{cartItem.name}</p>
+        <h2>{cartItem.name}</h2>
         <p>{cartItem.category}</p>
         <p>{cartItem.price}</p>
-        <p>for: <input /></p>
+        <label>For</label>
+        <input />
         <label>Special requests</label>
         <textarea></textarea>
         <button>Remove</button>
@@ -47,7 +48,8 @@ export function Cart() {
       </section>
     </>
   );
+
   function placeOrder() {
-    console.log("Placing the order.")
+    console.log("placing the order")
   }
 }
