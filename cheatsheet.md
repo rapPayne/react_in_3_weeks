@@ -13,8 +13,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_e
 
 ### Flex layout
 
-
-
 ## Browser things
 
 ### To see something in the browser console
@@ -22,7 +20,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_e
 2. Click the hamburger menu and choose *other tools-developer tools* then choose "Console" in the tab.
 3. Right-click the page, choose *Inspect* and then choose "Console" in the tab.
 
-## To view network traffic
+### To view network traffic
 Just like above, get the dev tools open but then hit the "Network" tab. You'll be able to see every request and response. Clicking on a request will show you its details.
 
 ## React things
@@ -38,3 +36,17 @@ https://stackoverflow.com/questions/56972415/useeffect-dependency-array-and-esli
 
 ### Redux
 https://leanpub.com/redux-book
+
+
+## Eslint
+
+### Ignoring rules across the entire project
+1. Find the .eslintrc.cjs (or .mjs or .js) file
+1. Add the rule you want to ignore to the "rules:" section.
+
+For example:
+```javascript
+  rules: {
+    'react/prop-types': 'off',  // To turn off the checking of prop-types
+```
+
