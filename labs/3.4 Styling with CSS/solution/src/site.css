@@ -9,6 +9,8 @@
   background-color: var(--light1);
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  margin-top: 50px;
 }
 
 button {
@@ -25,17 +27,17 @@ button {
   top: 0;
   right: 0;
   left: 0;
-}
 
-#pageHeader nav {
-  display: flex;
-  background-color: var(--dark2);
-}
+  & nav {
+    display: flex;
+    background-color: var(--dark2);
 
-#pageHeader nav a {
-  color: var(--light1);
-  text-decoration: none;
-  padding: 10px;
-  margin: 10px;
-  text-transform: uppercase;
+    & a {
+      color: var(--light1);
+      text-decoration: none;
+      padding: 10px;
+      margin: 10px;
+      text-transform: uppercase;
+    }
+  }
 }

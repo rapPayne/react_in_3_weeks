@@ -1,24 +1,28 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
+
 import { login as loginToServer } from './utilities';
 export function Login(props) {
   const setUser = props.setUser;
-  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
   return (
     <>
       <h1>Log in</h1>
       <label htmlFor="username">Username</label>
-      <input value={username} onChange={e => setUsername(e.target.value)} id="username" />
-      <label>Password</label>
-      <input value={password} onChange={e => setPassword(e.target.value)} />
-      <button onClick={event => login(event)}>Log in</button>
-      <a href="/register">Register</a>
+      <input id="username" value={username} onChange={e => setUsername(e.target.value)} />
+      <label htmlFor="password">Password</label>
+      <input id="password" value={password} onChange={e => setPassword(e.target.value)} />
+      <button onClick={() => login()}>Log in</button>
+      <Link to="/register">Register</Link>
     </>
   );
+
   function login() {
     loginToServer(username, password)
+      .then(user => (console.log(user), user))
       .then(user => setUser(user))
       .then(() => navigate('/cart'))
   }

@@ -1,8 +1,9 @@
 import { toCurrency } from './utilities';
 
-export function MenuItem(props) {
-  const addToCart = props.addToCart;
+export const MenuItem = (props) => {
   const menuItem = props.menuItem;
+  const addToCart = props.addToCart;
+
   return (
     <section style={styles.itemCard}>
       <div>
@@ -19,6 +20,7 @@ export function MenuItem(props) {
     </section>
   )
 }
+
 const styles = {
   itemCard: {
     flex: "1 0 250px",
