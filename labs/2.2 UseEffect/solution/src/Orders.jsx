@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { getOrders } from './utilities';
 import { useNavigate } from 'react-router-dom';
+import { getOrders } from './utilities';
+
 export function Orders() {
-  useEffect(() => {
-    getOrders()
-  }, []);
   const navigate = useNavigate();
-  console.log("Orders");
+  useEffect(() => {
+    getOrders();
+  }, []);
   return (
     <>
       <h1>Orders</h1>

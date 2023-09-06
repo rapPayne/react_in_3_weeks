@@ -1,17 +1,16 @@
 import { useEffect } from 'react';
 import { getOrder, getMenuItems } from './utilities';
 import { useParams } from 'react-router-dom';
+
 export function Order() {
   const { orderId } = useParams(); // <-Add this line
-  console.log("Order", orderId);
   useEffect(() => {
     getOrder(orderId)
     getMenuItems()
   }, [orderId]);
   return (
     <>
-      <h1>This is your order </h1>
-      <p>Order number: {orderId}</p>
+      <h2>Order {orderId}</h2>
       <p>Customer: CUSTOMER_ID_HERE</p>
       <p>Number of guests: NUMBER_OF_GUESTS_HERE</p>
       <p>Credit card: CREDIT_CARD_NUMBER_HERE, expiry: EXPIRY_MONTH_HERE/EXPIRY_YEAR_HERE</p>
