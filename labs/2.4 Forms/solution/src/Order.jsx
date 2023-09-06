@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getOrder, getMenuItems } from './utilities';
 import { useParams } from 'react-router-dom';
+
 export function Order() {
-  const { orderId } = useParams(); // <-Add this line
-  console.log("Order", orderId);
+  const { orderId } = useParams();
   const [order, setOrder] = useState({});
   const [menuItems, setMenuItems] = useState([]);
   useEffect(() => {
@@ -15,8 +15,7 @@ export function Order() {
   console.log({ order, menuItems })
   return (
     <>
-      <h1>This is your order </h1>
-      <p>Order number: {orderId}</p>
+      <h2>Order {orderId}</h2>
       <p>Customer: CUSTOMER_ID_HERE</p>
       <p>Number of guests: NUMBER_OF_GUESTS_HERE</p>
       <p>Credit card: CREDIT_CARD_NUMBER_HERE, expiry: EXPIRY_MONTH_HERE/EXPIRY_YEAR_HERE</p>
