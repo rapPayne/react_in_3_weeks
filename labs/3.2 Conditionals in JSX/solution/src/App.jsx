@@ -1,34 +1,35 @@
 import { useState, useEffect } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import { getNextCartItemId } from './utilities';
-import { Menu } from './Menu';
-import { Order } from './Order';
-import { Orders } from './Orders';
 import { Cart } from './Cart';
 import { Login } from './Login';
-import { Register } from './Register';
+import { Menu } from './Menu';
 import { NotFound } from './NotFound';
+import { Order } from './Order';
+import { Orders } from './Orders';
+import { Register } from './Register';
+
 export function App() {
   const [cart, setCart] = useState([]);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState();
   return (
     <>
       <header id="pageHeader">
         <nav>
           <Link to="/">Dinner and a movie</Link>
-          {user.token ? null : <Link to="/login">Log in</Link>}
+          {user ? null : <Link to="/login">Log in</Link>}
           <Link to="/register">Register</Link>
           <Link to="/cart">Check out</Link>
           <Link to="/orders">Past orders</Link>
-          {user.token && <Link to="#" onClick={() => setUser({})}>Log out</Link>}
+          {user && <Link to="#" onClick={() => setUser()}>Log out</Link>}
         </nav>
       </header>
       <main>
         <Routes>
           <Route path='/' element={<Menu addToCart={addToCart} />} />
           <Route path='/cart' element={<Cart cart={cart} removeFromCart={removeFromCart} user={user} />} />
-          <Route path="/orders/:orderId" element={<Order />} />
           <Route path='/orders' element={<Orders />} />
+          <Route path="/orders/:orderId" element={<Order />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login setUser={setUser} />} />
           <Route path="*" element={<NotFound />} />
@@ -37,6 +38,7 @@ export function App() {
       <footer></footer>
     </>
   );
+
   // Converts a menuItem to a cartItem and adds it to the cart.
   function addToCart(menuItem) {
     const cartItem = {

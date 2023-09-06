@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
-import { getOrders } from './utilities';
 import { useNavigate } from 'react-router-dom';
+import { getOrders } from './utilities';
 import { getOrderTotal, getNumberOfDiners } from "./utilities";
 
 export function Orders() {
-  const [orders, setOrders] = useState([]);
+  const navigate = useNavigate();
+  const [orders, setOrders] = useState([]); // <-- Add this
   useEffect(() => {
     getOrders()
+      .then(res => (console.log(res), res))
       .then(os => setOrders(os))
   }, []);
-  const navigate = useNavigate();
-  console.log("Orders");
   return (
     <>
       <h1>Orders</h1>
@@ -25,7 +25,7 @@ export function Orders() {
         </thead>
         <tbody>
           {orders.map(order => (
-            <tr onClick={() => navigate(`/orders/${order.id}`)} key={order.id}>
+            <tr onClick={() => navigate(`/orders/12345`)} key={order.id}>
               <td>{order.id}</td>
               <td>{order.orderTime}</td>
               <td>{getOrderTotal(order)}</td>
