@@ -1,11 +1,12 @@
 import { Link, Route, Routes } from 'react-router-dom';
-import { Menu } from './Menu';
-import { Order } from './Order';
-import { Orders } from './Orders';
 import { Cart } from './Cart';
 import { Login } from './Login';
-import { Register } from './Register';
+import { Menu } from './Menu';
 import { NotFound } from './NotFound';
+import { Order } from './Order';
+import { Orders } from './Orders';
+import { Register } from './Register';
+
 export function App() {
   return (
     <>
@@ -22,8 +23,8 @@ export function App() {
         <Routes>
           <Route path='/' element={<Menu />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path="/orders/:orderId" element={<Order />} />
           <Route path='/orders' element={<Orders />} />
+          <Route path="/orders/:orderId" element={<Order />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
           <Route path="*" element={<NotFound />} />
