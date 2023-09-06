@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { calculateTax, getCartTotal, toCurrency, placeOrder as placeOrderToServer } from './utilities';
+
 export function Cart() {
   const [tip, setTip] = useState(0);
   const [pan, setPan] = useState(0);
+  const [cvv, setCvv] = useState(0);
   const [expiryMonth, setExpiryMonth] = useState(0);
   const [expiryYear, setExpiryYear] = useState(0);
-  const [cvv, setCvv] = useState(0);
-  const [location, setLocation] = useState("");
   const cart = [{
     id: 1,
     name: "Garden salad",
@@ -16,17 +16,17 @@ export function Cart() {
     imageUrl: "images/salad_1.jpg",
     available: true,
     itemId: 300
-  }]
-  const cartItem = cart[0]
-  console.log("Cart");
+  }];
+  const cartItem = cart[0];
   return (
     <>
       <h1>Cart</h1>
       <section className="cartItem">
-        <p>{cartItem.name}</p>
+        <h2>{cartItem.name}</h2>
         <p>{cartItem.category}</p>
         <p>{cartItem.price}</p>
-        <p>for: <input /></p>
+        <label>For</label>
+        <input />
         <label>Special requests</label>
         <textarea></textarea>
         <button>Remove</button>
@@ -39,24 +39,25 @@ export function Cart() {
       </section>
       <section>
         <label>Deliver to...</label>
-        <input value={location} onChange={e => setLocation(e.target.value)} />
+        <input />
       </section>
       <section>
         <h2>Payment</h2>
         <h3>Credit card</h3>
         <label htmlFor="pan">Number</label>
-        <input value={pan} onChange={e => setPan(+e.target.value)} id="pan" required />
+        <input id="pan" value={pan} onChange={e => setPan(e.target.value)} required />
         <label htmlFor="expiryMonth">Month</label>
-        <input value={expiryMonth} onChange={e => setExpiryMonth(+e.target.value)} type="number" id="expiryMonth" required />
+        <input type="number" id="expiryMonth" value={expiryMonth} onChange={e => setExpiryMonth(e.target.value)} required />
         <label htmlFor="expiryYear">Year</label>
-        <input value={expiryYear} onChange={e => setExpiryYear(+e.target.value)} type="number" id="expiryYear" required />
+        <input type="number" id="expiryYear" value={expiryYear} onChange={e => setExpiryYear(e.target.value)} required />
         <label htmlFor="cvv">CVV</label>
-        <input value={cvv} onChange={e => setCvv(+e.target.value)} id="cvv" required />
+        <input id="cvv" value={cvv} onChange={e => setCvv(e.target.value)} required />
         <button onClick={() => placeOrder()}>Place order</button>
       </section>
     </>
   );
+
   function placeOrder() {
-    console.log("Placing the order.", pan, expiryMonth, expiryYear, cvv)
+    console.log("placing the order", pan, cvv, expiryMonth, expiryYear)
   }
 }
