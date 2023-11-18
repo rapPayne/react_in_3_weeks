@@ -61,7 +61,7 @@ So as a separate project, you won't make changes here, you'll make changes in th
 
 
 # Connect with Rap
-- Twitter: [@RapPayne](https://twitter.com/RapPayne)
+- X/Twitter: [RapPayne](https://twitter.com/RapPayne)
 - LinkedIn: [RapPayne](https://www.linkedin.com/in/rappayne/)
 - Github: [RapPayne](https://github.com/rapPayne)
 - Reddit: [RapPayne](https://www.reddit.com/u/rapPayne)
