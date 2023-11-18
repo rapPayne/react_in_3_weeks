@@ -8,7 +8,7 @@ import { Order } from './components/Order';
 import { Orders } from './components/Orders';
 import { Login } from './components/Login';
 import { Register } from './components/Register';
-import './index.css';
+import './site.css';
 import { MenuItem } from './types/MenuItem';
 import { useState } from 'react';
 import { CartItem } from './types/CartItem';
