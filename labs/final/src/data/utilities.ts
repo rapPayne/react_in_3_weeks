@@ -13,7 +13,7 @@ export const getOrderTotal = (order: OrderType): string =>
 export const getNumberOfDiners = (order: OrderType): number => {
   const diners: string[] = [];
   let totalDiners: number = 0;
-  order.items.forEach((i) => diners.includes(i.firstName ?? "no name") || totalDiners++);
+  order.items?.forEach((i) => diners.includes(i.firstName ?? "no name") || totalDiners++);
   return totalDiners;
 }
 

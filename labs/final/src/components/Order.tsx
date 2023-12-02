@@ -21,7 +21,7 @@ export const Order = () => {
       <h2>Order {orderId}</h2>
       <p>Customer: {order?.userId}</p>
       <p>Number of guests: {order && getNumberOfDiners(order)}</p>
-      <p>Credit card: {order?.creditCard.PAN}, expiry: {order?.creditCard.expiryMonth}/{order?.creditCard.expiryYear}</p>
+      <p>Credit card: {order?.creditCard?.PAN}, expiry: {order?.creditCard?.expiryMonth}/{order?.creditCard?.expiryYear}</p>
       <p>Location: {order?.location}</p>
       <p>Order time: {order?.orderTime.toLocaleString()}</p>
       <table>
@@ -33,8 +33,8 @@ export const Order = () => {
               <td>(for {item.firstName})</td>
             </tr>
           ))}
-          <tr><td>Tax</td><td>{order?.tax}</td></tr>
-          <tr><td>Tip</td><td>{order?.tip}</td></tr>
+          <tr><td>Tax</td><td>{order?.tax ?? 0}</td></tr>
+          <tr><td>Tip</td><td>{order?.tip ?? 0}</td></tr>
           <tr><td>Total</td><td>{order && getOrderTotal(order)}</td></tr>
         </tbody>
       </table>
