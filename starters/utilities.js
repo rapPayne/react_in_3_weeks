@@ -103,6 +103,12 @@ export const getOrderTotal = (order) =>
     + order.items?.reduce((prev, curr) => prev + curr.price, 0)
   );
 
+
+/**
+ * Given an order, return the number of people on this ticket.
+ * @param {Order} order 
+ * @returns number: How many diners do we think are on this ticket
+ */
 export const getNumberOfDiners = (order) => {
   const diners = [];
   let totalDiners = 0;
