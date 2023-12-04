@@ -15,6 +15,7 @@ export const Cart = ({ cart, changeCartItem, removeFromCart }: Props) => {
   const navigate = useNavigate();
   const user: User = useContext(userContext);
   const [tip, setTip] = useState<number | undefined>(undefined);
+  const [area, setArea] = useState("");
   const [location, setLocation] = useState("");
   const [pan, setPan] = useState<string | undefined>(user?.creditCard?.PAN);
   const [expiryMonth, setExpiryMonth] = useState<number | undefined>(user?.creditCard?.expiryMonth)
@@ -33,7 +34,7 @@ export const Cart = ({ cart, changeCartItem, removeFromCart }: Props) => {
           <label style={styles.requests}>Special requests
             <textarea value={ci.notes} onChange={e => setNotes(e.target.value, ci)} style={styles.textarea}></textarea>
           </label>
-          <button onClick={_ => removeFromCart(ci)} style={styles.button}>Remove</button>
+          <button onClick={() => removeFromCart(ci)} style={styles.button}>Remove</button>
         </section>
       ))}
       <section>
@@ -43,8 +44,12 @@ export const Cart = ({ cart, changeCartItem, removeFromCart }: Props) => {
         <p>Amount to charge: {toCurrency(getCartTotal(cart) + calculateTax(getCartTotal(cart)) + (tip || 0))}</p>
       </section>
       <section>
-        <label>Deliver to...</label>
-        <input value={location} onChange={e => setLocation(e.target.value)} />
+        <label htmlFor='id'>Deliver to...</label>
+        <select value={area} id="area" onChange={e => setArea(e.target.value)}>
+          {['Theater 1', 'Theater 2', 'Theater 3', 'Theater 4', 'Theater 5', 'Theater 6', 'Takeout',].map(area => <option value={area} key={area}>{area}</option>)}
+        </select>
+        <label htmlFor="location">Location (like table number)</label>
+        <input value={location} onChange={e => setLocation(e.target.value)} id="location" />
       </section>
       <section>
         <h2>Payment</h2>
@@ -62,7 +67,7 @@ export const Cart = ({ cart, changeCartItem, removeFromCart }: Props) => {
     </>
   )
   function placeOrder(): void {
-    const newOrder = { cart, tip, pan, expiryMonth, expiryYear, cvv, location };
+    const newOrder = { cart, tip, pan, expiryMonth, expiryYear, cvv, area, location };
     placeOrderToServer(newOrder)
       .then(res => {
         const orderId = res.id;

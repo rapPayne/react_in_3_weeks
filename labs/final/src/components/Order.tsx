@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Order as OrderType } from '../types/Order';
 import { getMenuItems, getOrder } from "../data/repository";
-import { getNumberOfDiners, getOrderTotal } from "../data/utilities";
+import { getNumberOfDiners, getOrderTotal, toCurrency } from "../data/utilities";
 import { MenuItem } from "../types/MenuItem";
 
 export const Order = () => {
@@ -22,19 +22,20 @@ export const Order = () => {
       <p>Customer: {order?.userId}</p>
       <p>Number of guests: {order && getNumberOfDiners(order)}</p>
       <p>Credit card: {order?.creditCard?.PAN}, expiry: {order?.creditCard?.expiryMonth}/{order?.creditCard?.expiryYear}</p>
+      <p>Area: {order?.area}</p>
       <p>Location: {order?.location}</p>
       <p>Order time: {order?.orderTime.toLocaleString()}</p>
       <table>
         <tbody>
           {order?.items.map(item => (
-            <tr key={item.cartItemId}>
+            <tr key={item.id}>
               <td>{getMenuItem(item.itemId)?.name}</td>
-              <td>{item.price}</td>
+              <td>{toCurrency(item.price)}</td>
               <td>(for {item.firstName})</td>
             </tr>
           ))}
-          <tr><td>Tax</td><td>{order?.tax ?? 0}</td></tr>
-          <tr><td>Tip</td><td>{order?.tip ?? 0}</td></tr>
+          <tr><td>Tax</td><td>{toCurrency(order?.tax ?? 0)}</td></tr>
+          <tr><td>Tip</td><td>{toCurrency(order?.tip ?? 0)}</td></tr>
           <tr><td>Total</td><td>{order && getOrderTotal(order)}</td></tr>
         </tbody>
       </table>
