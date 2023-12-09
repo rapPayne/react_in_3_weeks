@@ -2,6 +2,36 @@
 
 ## JavaScript things
 
+### Arrow functions
+Concise syntax for anonymous functions.
+Useful for event handlers and callback functions.
+Example: const sum = (a, b) => a + b;
+### Destructuring
+Extract specific values from arrays and objects.
+Makes code cleaner and easier to read.
+Example: const [firstName, lastName] = ["John", "Doe"];
+### Spread operator
+Expands an iterable into individual elements.
+Useful for copying arrays and objects.
+Example: const numbers = [...[1, 2, 3], 4, 5];
+### Array mapping
+Applies a function to each element in an array.
+Useful for transforming data and creating new arrays.
+Example: const squares = numbers.map(num => num * num);
+### Hoisting
+JavaScript's way of handling variable declaration.
+Variables declared with var are hoisted, but not those with let and const.
+Important to understand for proper variable usage.
+### Promises
+Represent asynchronous operations and their outcomes.
+Used for handling data fetching and other asynchronous tasks.
+Example: fetch("data.json") .then(response => response.json()) .then(data => console.log(data));
+
+### Object literals
+Shorthand syntax for object properties.
+Enables computed property names and method definitions.
+Example: const person = { name, age: 30, greet() { console.log("Hello!"); } };
+
 ### Exception handling
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 
