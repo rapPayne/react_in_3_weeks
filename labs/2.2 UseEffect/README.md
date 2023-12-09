@@ -43,4 +43,4 @@ Don't forget your imports like before. useEffect comes from react. getOrders com
 2. Run and test by navigating to the [http://localhost:5173/orders](http://localhost:5173/orders) route and looking in the [devtools network](../../cheatsheet.md#to-view-network-traffic) tab. It should be getting back some orders.
 
 
-A note on [exhaustive dependencies](/cheatsheet.md/exhaustive-dependencies).
+A note on [exhaustive dependencies](/cheatsheet.md#exhaustive-dependencies).
