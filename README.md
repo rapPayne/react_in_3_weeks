@@ -1,8 +1,4 @@
 # React in 3 Weeks
-<!-- TODO: RAP testing is JS Testing -> Angular Testing. And JS Testing -> React Testing -> RN Testing
-TODO: RAP Renumber the links in Agenda.md and make sure they work
-TODO: Define the Orders filter criteria below
-TODO: Add the completed app to github and allow users to test out the app. -->
 
 Resources to support @RapPayne's O'Reilly course.
 
