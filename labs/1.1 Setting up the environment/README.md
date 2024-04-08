@@ -10,7 +10,7 @@
 
 2. Get this whole repository and sub-repositories. (Note the --recurse-submodules flag. It's important)
 ```bash
-git clone --recurse-submodule https://github.com:rapPayne/react_in_3_weeks.git
+git clone --recurse-submodule https://github.com/rapPayne/react_in_3_weeks.git
 ```
 or
 ```bash

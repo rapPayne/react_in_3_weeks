@@ -44,7 +44,7 @@ Authenticate to the system. Writes to local storage for persisting a login token
 
 ## The API data server
 Obviously we need a place to get the data so we've provided a RESTful server that will be serving the data.
-You can find it [here](server).
+You can find it [here](https://github.com/rapPayne/daam-server).
 
 This server is from a separate git project which we've submoduled with this:
 ```bash
@@ -62,5 +62,5 @@ So as a separate project, you won't make changes here, you'll make changes in th
 - Github: [RapPayne](https://github.com/rapPayne)
 - Reddit: [RapPayne](https://www.reddit.com/u/rapPayne)
 
-Copyright &copy; 2023 Agile Gadgets LLC. 
+Copyright &copy; 2024 Agile Gadgets LLC. 
 All rights reserved. You may not republish or copy any part of this repository except for your own personal learning. If you want to use this as courseware for a React course, contact [@RapPayne](http://github.com/RapPayne) to obtain a license. 
