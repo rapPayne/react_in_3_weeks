@@ -16,6 +16,7 @@ or
 ```bash
 git clone --recurse-submodule git@github.com:rapPayne/react_in_3_weeks.git
 ```
+[What if that submodule thing doesn't work?](#what-if-that-submodule-thing-doesnt-work)
 
 ## Starting the API data server
 1. Open a command prompt. cd to the [server](../../server) folder and run this.
@@ -32,3 +33,25 @@ ___Leave this server running at all times___
 3. If you see JSON data, your server is running.
 
 Congrats! You're done.
+
+
+## What if that submodule thing doesn't work?
+
+Here are a couple of options.
+
+### You could try these commands
+1. From the empty server folder...
+```bash
+git submodule init
+git submodule update
+```
+
+### You can download the server project separately
+1. cd to literally anywhere else.
+1. `git clone git@github.com:rapPayne/daam-server.git`
+1. Then do the server parts in that folder. Namely, 
+```bash
+npm install
+npm run load-db
+npm run start
+```

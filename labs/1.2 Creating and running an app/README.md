@@ -63,7 +63,7 @@ Ignore the console error about an export. We'll fix that soon.
 6. Create a new file in `src` called `Menu.jsx` and put this in it
 ```JavaScript
 import { useEffect, useState } from 'react';
-import { getMenuItems } from './utilities';
+import { getMenuItems, toCurrency } from './utilities';
 export const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
   useEffect(() => {
