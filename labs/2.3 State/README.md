@@ -22,7 +22,7 @@ Got it? Now let's do an easy one together.
 ```JavaScript
 export function App() {
   const [cart, setCart] = useState([]); // <-- Add this
-  const [user, setUser] = useState({}); // <-- Add this
+  const [user, setUser] = useState(); // <-- Add this
   console.log({ cart });
   return (
     ...
