@@ -25,7 +25,7 @@ export function Orders() {
         </thead>
         <tbody>
           {orders.map(order => (
-            <tr onClick={() => navigate(`/orders/12345`)} key={order.id}>
+            <tr onClick={() => navigate(`/orders/${order.id}`)} key={order.id}>
               <td>{order.id}</td>
               <td>{order.orderTime}</td>
               <td>{getOrderTotal(order)}</td>
