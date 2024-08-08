@@ -2,21 +2,22 @@ import { useState, useEffect } from 'react'
 import { Order as OrderType } from '../types/Order';
 import { getOrders } from '../data/repository';
 import { getOrderTotal, getNumberOfDiners } from "../data/utilities";
-
+import './Orders.css';
 import { useNavigate } from 'react-router-dom';
+
 export const Orders = () => {
   const navigate = useNavigate();
-  const [orders, setOrders]: [OrderType[], any] = useState([]);
+  const [orders, setOrders] = useState([] as OrderType[]);
   useEffect(() => {
     getOrders()
-      .then((res: any) => { console.log(res); return res; })
-      .then((res: Array<any>) => res.map((o: any) => ({ ...o, orderTime: new Date(o.orderTime), pickupTime: new Date(o.pickupTime) })))
+      .then((res) => { console.log(res); return res; })
+      .then((res: []) => res.map((o: OrderType) => ({ ...o, orderTime: new Date(o.orderTime), pickupTime: new Date(o.pickupTime) })))
       .then((o: OrderType[]) => setOrders(o))
       .catch(err => console.error(err))
   }, []);
 
   return (
-    <>
+    <section className='Orders'>
       <h1>Orders</h1>
       <table>
         <thead>
@@ -38,8 +39,7 @@ export const Orders = () => {
           ))}
         </tbody>
       </table>
-
-    </>
+    </section>
   )
 }
 

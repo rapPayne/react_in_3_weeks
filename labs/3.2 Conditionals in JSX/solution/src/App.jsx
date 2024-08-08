@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import { getNextCartItemId } from './utilities';
 import { Cart } from './Cart';

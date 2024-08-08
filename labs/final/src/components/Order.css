@@ -1,0 +1,24 @@
+.Order {
+  span.label {
+    font-weight: bold;
+  }
+
+  & table {
+    border-spacing: 10px;
+    background-color: var(--light2);
+  }
+
+  & table>tbody>tr>td:nth-child(2) {
+    font-weight: bold;
+  }
+
+  & table>tbody>tr.totalLine>td:nth-child(2) {
+    border-top: 2px solid black;
+    font-size: 1.3em;
+  }
+
+  & table>tbody>tr>td:nth-child(2) {
+    text-align: right;
+  }
+
+}
