@@ -1,4 +1,4 @@
-import { Context, createContext, useEffect } from 'react';
+import { Context, createContext } from 'react';
 import { Link, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster, toast } from 'react-hot-toast';
 import { Menu } from './components/Menu';
@@ -14,7 +14,7 @@ import { useState } from 'react';
 import { CartItem } from './types/CartItem';
 import { User } from './types/User';
 import { getNextCartItemId } from './data/utilities';
-import { SideBySide } from './components/SideBySide';
+//import { SideBySide } from './components/SideBySide';
 
 export const userContext: Context<User> = createContext<User>({});
 
@@ -44,13 +44,13 @@ export function App() {
               <Menu addToCart={addToCart} />
               <Cart cart={cart} changeCartItem={changeCartItem} removeFromCart={removeFromCart} />
             </SideBySide>} /> */}
-          <Route path='/' element={<Menu addToCart={addToCart} />} />
+          <Route path="/" element={<Menu addToCart={addToCart} />} />
           <Route path="/menu" element={<Navigate to="/" replace={true} />} />
-          <Route path='/cart' element={<Cart cart={cart} removeFromCart={removeFromCart} changeCartItem={changeCartItem} />} />
-          <Route path='/orders' element={<Orders />} />
-          <Route path='/orders/:orderId' element={<Order />} />
-          <Route path='/login' element={<Login setUser={setUser} />} />
-          <Route path='/register' element={<Register setUser={setUser} />} />
+          <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} changeCartItem={changeCartItem} />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/orders/:orderId" element={<Order />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/register" element={<Register setUser={setUser} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
