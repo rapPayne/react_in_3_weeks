@@ -8,7 +8,7 @@ export interface User {
   email?: string;
   imageUrl?: string;
   creditCard?: {
-    PAN?: string;
+    pan?: string;
     expiryMonth?: number;
     expiryYear?: number;
   },

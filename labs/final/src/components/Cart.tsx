@@ -17,7 +17,7 @@ export const Cart = ({ cart, changeCartItem, removeFromCart }: Props) => {
   const [tip, setTip] = useState<number | undefined>(undefined);
   const [area, setArea] = useState("");
   const [location, setLocation] = useState("");
-  const [pan, setPan] = useState<string | undefined>(user?.creditCard?.PAN);
+  const [pan, setPan] = useState<string | undefined>(user?.creditCard?.pan);
   const [expiryMonth, setExpiryMonth] = useState<number | undefined>(user?.creditCard?.expiryMonth)
   const [expiryYear, setExpiryYear] = useState<number | undefined>(user?.creditCard?.expiryYear)
   const [cvv, setCvv] = useState<number | undefined>();
